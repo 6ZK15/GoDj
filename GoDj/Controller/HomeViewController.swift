@@ -9,7 +9,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    //IBOutlets
+    @IBOutlet var errorMessageView: UIView!
+    @IBOutlet var errorLabel: UILabel!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var submitButton: UIButton!
+    
+    //Create TextField Object to access functions
+    var textField = TextFieldView();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +31,34 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showHideErrorMessageView() {
+        UIView.animate(withDuration: 1, animations: {
+            self.errorMessageView.transform = CGAffineTransform.init(translationX: 0, y: 108)
+        }) {(true) in
+            UIView.animate(withDuration: 2, delay: 2, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                self.errorMessageView.transform = CGAffineTransform.init(translationX: 0, y: -108)
+            })
+        }
     }
-    */
+    
+    @IBAction func signIn(_ sender: Any) {
+        validation()
+    }
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        validation()
+
+    }
+    
+    func validation() {
+        if usernameTextField.text == "" {
+            textField.setErrorTextField(textField: usernameTextField, borderWidth: 2)
+            self.errorLabel.text = "Please Enter a Username"
+            showHideErrorMessageView()
+        } else {
+            usernameTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
 
 }
+    
+
