@@ -7,16 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84634B6D1FD3000000B47737 /* navBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B581FD2FFFB00B47737 /* navBarBG.png */; };
+		84634B6E1FD3000000B47737 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B591FD2FFFB00B47737 /* bg.png */; };
+		84634B6F1FD3000000B47737 /* errorBoxBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5A1FD2FFFB00B47737 /* errorBoxBG.png */; };
+		84634B701FD3000000B47737 /* notUserLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5B1FD2FFFC00B47737 /* notUserLogin.png */; };
+		84634B711FD3000000B47737 /* fUsrnmBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5C1FD2FFFC00B47737 /* fUsrnmBtn.png */; };
+		84634B721FD3000000B47737 /* signUpBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5D1FD2FFFC00B47737 /* signUpBG.png */; };
+		84634B731FD3000000B47737 /* setupBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5E1FD2FFFC00B47737 /* setupBtn.png */; };
+		84634B741FD3000000B47737 /* checkmarkB.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B5F1FD2FFFC00B47737 /* checkmarkB.png */; };
+		84634B751FD3000000B47737 /* menuBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B601FD2FFFC00B47737 /* menuBtn.png */; };
+		84634B761FD3000000B47737 /* fPswBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B611FD2FFFD00B47737 /* fPswBtn.png */; };
+		84634B771FD3000000B47737 /* titleBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B621FD2FFFD00B47737 /* titleBG.png */; };
+		84634B781FD3000000B47737 /* signUpBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B631FD2FFFD00B47737 /* signUpBtn2.png */; };
+		84634B791FD3000000B47737 /* nextBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B641FD2FFFD00B47737 /* nextBtn.png */; };
+		84634B7A1FD3000000B47737 /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B651FD2FFFD00B47737 /* checkBox.png */; };
+		84634B7B1FD3000000B47737 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B661FD2FFFD00B47737 /* submitButton.png */; };
+		84634B7C1FD3000000B47737 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B671FD2FFFE00B47737 /* checkmark.png */; };
+		84634B7D1FD3000000B47737 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B681FD2FFFE00B47737 /* logo.png */; };
+		84634B7E1FD3000000B47737 /* signUpBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B691FD2FFFE00B47737 /* signUpBtn.png */; };
+		84634B7F1FD3000000B47737 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6A1FD2FFFF00B47737 /* CloseButton.png */; };
+		84634B801FD3000000B47737 /* tcCellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6B1FD2FFFF00B47737 /* tcCellBG.png */; };
+		84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6C1FD3000000B47737 /* uploadPicBtn.png */; };
 		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
-		96435C7F1FD23A5700E87BA3 /* SignUpBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C7E1FD23A5600E87BA3 /* SignUpBackground.png */; };
-		96435C811FD23F3F00E87BA3 /* SignUpButtonForForm.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C801FD23F3F00E87BA3 /* SignUpButtonForForm.png */; };
-		96435C871FD246C600E87BA3 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C861FD246C600E87BA3 /* CloseButton.png */; };
-		96435C891FD25CC200E87BA3 /* gdbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C881FD25CC200E87BA3 /* gdbg.png */; };
-		96435C8B1FD25FFA00E87BA3 /* TermsAndConditionsHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C8A1FD25FF900E87BA3 /* TermsAndConditionsHeader.png */; };
-		96435C8D1FD260E000E87BA3 /* NextButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C8C1FD260E000E87BA3 /* NextButton.png */; };
 		96435C911FD2686900E87BA3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96435C901FD2686900E87BA3 /* SWRevealViewController.m */; };
-		96435C971FD2779100E87BA3 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96435C961FD2779100E87BA3 /* MenuButton.png */; };
 		96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */; };
 		96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A7F1FCCFF3600C5486D /* Main.storyboard */; };
 		96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A821FCCFF3600C5486D /* Assets.xcassets */; };
@@ -43,23 +57,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84634B581FD2FFFB00B47737 /* navBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBarBG.png; sourceTree = "<group>"; };
+		84634B591FD2FFFB00B47737 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		84634B5A1FD2FFFB00B47737 /* errorBoxBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorBoxBG.png; sourceTree = "<group>"; };
+		84634B5B1FD2FFFC00B47737 /* notUserLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notUserLogin.png; sourceTree = "<group>"; };
+		84634B5C1FD2FFFC00B47737 /* fUsrnmBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fUsrnmBtn.png; sourceTree = "<group>"; };
+		84634B5D1FD2FFFC00B47737 /* signUpBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpBG.png; sourceTree = "<group>"; };
+		84634B5E1FD2FFFC00B47737 /* setupBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setupBtn.png; sourceTree = "<group>"; };
+		84634B5F1FD2FFFC00B47737 /* checkmarkB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmarkB.png; sourceTree = "<group>"; };
+		84634B601FD2FFFC00B47737 /* menuBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBtn.png; sourceTree = "<group>"; };
+		84634B611FD2FFFD00B47737 /* fPswBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fPswBtn.png; sourceTree = "<group>"; };
+		84634B621FD2FFFD00B47737 /* titleBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleBG.png; sourceTree = "<group>"; };
+		84634B631FD2FFFD00B47737 /* signUpBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpBtn2.png; sourceTree = "<group>"; };
+		84634B641FD2FFFD00B47737 /* nextBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextBtn.png; sourceTree = "<group>"; };
+		84634B651FD2FFFD00B47737 /* checkBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox.png; sourceTree = "<group>"; };
+		84634B661FD2FFFD00B47737 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
+		84634B671FD2FFFE00B47737 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		84634B681FD2FFFE00B47737 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		84634B691FD2FFFE00B47737 /* signUpBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpBtn.png; sourceTree = "<group>"; };
+		84634B6A1FD2FFFF00B47737 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
+		84634B6B1FD2FFFF00B47737 /* tcCellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tcCellBG.png; sourceTree = "<group>"; };
+		84634B6C1FD3000000B47737 /* uploadPicBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uploadPicBtn.png; sourceTree = "<group>"; };
 		96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		96435C771FD1E45500E87BA3 /* ForgotPasswordbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ForgotPasswordbutton.png; sourceTree = "<group>"; };
-		96435C781FD1E45500E87BA3 /* ForgotUsernamButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ForgotUsernamButton.png; sourceTree = "<group>"; };
-		96435C791FD1E45500E87BA3 /* SignUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpButton.png; sourceTree = "<group>"; };
-		96435C7A1FD1E45500E87BA3 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
-		96435C7B1FD1E45600E87BA3 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		96435C7E1FD23A5600E87BA3 /* SignUpBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpBackground.png; path = Images/SignUpBackground.png; sourceTree = SOURCE_ROOT; };
-		96435C801FD23F3F00E87BA3 /* SignUpButtonForForm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignUpButtonForForm.png; path = Images/SignUpButtonForForm.png; sourceTree = SOURCE_ROOT; };
-		96435C861FD246C600E87BA3 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseButton.png; path = Images/CloseButton.png; sourceTree = SOURCE_ROOT; };
-		96435C881FD25CC200E87BA3 /* gdbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gdbg.png; path = Images/gdbg.png; sourceTree = SOURCE_ROOT; };
-		96435C8A1FD25FF900E87BA3 /* TermsAndConditionsHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TermsAndConditionsHeader.png; path = Images/TermsAndConditionsHeader.png; sourceTree = SOURCE_ROOT; };
-		96435C8C1FD260E000E87BA3 /* NextButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NextButton.png; path = Images/NextButton.png; sourceTree = SOURCE_ROOT; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
 		96435C8F1FD2686900E87BA3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../Downloads/SWRevealController/SWRevealViewController.h; sourceTree = "<group>"; };
 		96435C901FD2686900E87BA3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../Downloads/SWRevealController/SWRevealViewController.m; sourceTree = "<group>"; };
-		96435C961FD2779100E87BA3 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MenuButton.png; path = Images/MenuButton.png; sourceTree = SOURCE_ROOT; };
 		96F22A781FCCFF3600C5486D /* GoDj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F22A801FCCFF3600C5486D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,18 +148,27 @@
 		9691EDCF1FCE398F00421737 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				96435C7E1FD23A5600E87BA3 /* SignUpBackground.png */,
-				96435C7A1FD1E45500E87BA3 /* Background.png */,
-				96435C771FD1E45500E87BA3 /* ForgotPasswordbutton.png */,
-				96435C8A1FD25FF900E87BA3 /* TermsAndConditionsHeader.png */,
-				96435C961FD2779100E87BA3 /* MenuButton.png */,
-				96435C8C1FD260E000E87BA3 /* NextButton.png */,
-				96435C881FD25CC200E87BA3 /* gdbg.png */,
-				96435C861FD246C600E87BA3 /* CloseButton.png */,
-				96435C781FD1E45500E87BA3 /* ForgotUsernamButton.png */,
-				96435C7B1FD1E45600E87BA3 /* submitButton.png */,
-				96435C791FD1E45500E87BA3 /* SignUpButton.png */,
-				96435C801FD23F3F00E87BA3 /* SignUpButtonForForm.png */,
+				84634B591FD2FFFB00B47737 /* bg.png */,
+				84634B651FD2FFFD00B47737 /* checkBox.png */,
+				84634B671FD2FFFE00B47737 /* checkmark.png */,
+				84634B5F1FD2FFFC00B47737 /* checkmarkB.png */,
+				84634B6A1FD2FFFF00B47737 /* CloseButton.png */,
+				84634B5A1FD2FFFB00B47737 /* errorBoxBG.png */,
+				84634B611FD2FFFD00B47737 /* fPswBtn.png */,
+				84634B5C1FD2FFFC00B47737 /* fUsrnmBtn.png */,
+				84634B681FD2FFFE00B47737 /* logo.png */,
+				84634B601FD2FFFC00B47737 /* menuBtn.png */,
+				84634B581FD2FFFB00B47737 /* navBarBG.png */,
+				84634B641FD2FFFD00B47737 /* nextBtn.png */,
+				84634B5B1FD2FFFC00B47737 /* notUserLogin.png */,
+				84634B5E1FD2FFFC00B47737 /* setupBtn.png */,
+				84634B5D1FD2FFFC00B47737 /* signUpBG.png */,
+				84634B691FD2FFFE00B47737 /* signUpBtn.png */,
+				84634B631FD2FFFD00B47737 /* signUpBtn2.png */,
+				84634B661FD2FFFD00B47737 /* submitButton.png */,
+				84634B6B1FD2FFFF00B47737 /* tcCellBG.png */,
+				84634B621FD2FFFD00B47737 /* titleBG.png */,
+				84634B6C1FD3000000B47737 /* uploadPicBtn.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -144,7 +176,6 @@
 		96F22A6F1FCCFF3500C5486D = {
 			isa = PBXGroup;
 			children = (
-				9691EDCF1FCE398F00421737 /* Images */,
 				96F22A7A1FCCFF3600C5486D /* GoDj */,
 				96F22A8F1FCCFF3600C5486D /* GoDjTests */,
 				96F22A9A1FCCFF3600C5486D /* GoDjUITests */,
@@ -176,6 +207,7 @@
 				96F22A841FCCFF3600C5486D /* LaunchScreen.storyboard */,
 				96F22A871FCCFF3600C5486D /* Info.plist */,
 				96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */,
+				9691EDCF1FCE398F00421737 /* Images */,
 			);
 			path = GoDj;
 			sourceTree = "<group>";
@@ -306,16 +338,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96435C8B1FD25FFA00E87BA3 /* TermsAndConditionsHeader.png in Resources */,
-				96435C871FD246C600E87BA3 /* CloseButton.png in Resources */,
+				84634B6E1FD3000000B47737 /* bg.png in Resources */,
+				84634B791FD3000000B47737 /* nextBtn.png in Resources */,
 				96F22A861FCCFF3600C5486D /* LaunchScreen.storyboard in Resources */,
-				96435C7F1FD23A5700E87BA3 /* SignUpBackground.png in Resources */,
-				96435C8D1FD260E000E87BA3 /* NextButton.png in Resources */,
-				96435C891FD25CC200E87BA3 /* gdbg.png in Resources */,
-				96435C971FD2779100E87BA3 /* MenuButton.png in Resources */,
 				96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */,
-				96435C811FD23F3F00E87BA3 /* SignUpButtonForForm.png in Resources */,
+				84634B781FD3000000B47737 /* signUpBtn2.png in Resources */,
+				84634B7E1FD3000000B47737 /* signUpBtn.png in Resources */,
+				84634B7F1FD3000000B47737 /* CloseButton.png in Resources */,
+				84634B771FD3000000B47737 /* titleBG.png in Resources */,
+				84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */,
+				84634B761FD3000000B47737 /* fPswBtn.png in Resources */,
+				84634B721FD3000000B47737 /* signUpBG.png in Resources */,
+				84634B701FD3000000B47737 /* notUserLogin.png in Resources */,
+				84634B741FD3000000B47737 /* checkmarkB.png in Resources */,
+				84634B6D1FD3000000B47737 /* navBarBG.png in Resources */,
+				84634B7B1FD3000000B47737 /* submitButton.png in Resources */,
+				84634B801FD3000000B47737 /* tcCellBG.png in Resources */,
+				84634B751FD3000000B47737 /* menuBtn.png in Resources */,
 				96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */,
+				84634B7A1FD3000000B47737 /* checkBox.png in Resources */,
+				84634B6F1FD3000000B47737 /* errorBoxBG.png in Resources */,
+				84634B7D1FD3000000B47737 /* logo.png in Resources */,
+				84634B731FD3000000B47737 /* setupBtn.png in Resources */,
+				84634B711FD3000000B47737 /* fUsrnmBtn.png in Resources */,
+				84634B7C1FD3000000B47737 /* checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
