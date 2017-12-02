@@ -28,6 +28,8 @@
 		84634B7F1FD3000000B47737 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6A1FD2FFFF00B47737 /* CloseButton.png */; };
 		84634B801FD3000000B47737 /* tcCellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6B1FD2FFFF00B47737 /* tcCellBG.png */; };
 		84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6C1FD3000000B47737 /* uploadPicBtn.png */; };
+		84634B851FD3118100B47737 /* gdSignup.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B841FD3118100B47737 /* gdSignup.png */; };
+		84634B891FD3178000B47737 /* dropDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B881FD3177F00B47737 /* dropDown.png */; };
 		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		96435C911FD2686900E87BA3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96435C901FD2686900E87BA3 /* SWRevealViewController.m */; };
@@ -78,6 +80,8 @@
 		84634B6A1FD2FFFF00B47737 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
 		84634B6B1FD2FFFF00B47737 /* tcCellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tcCellBG.png; sourceTree = "<group>"; };
 		84634B6C1FD3000000B47737 /* uploadPicBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uploadPicBtn.png; sourceTree = "<group>"; };
+		84634B841FD3118100B47737 /* gdSignup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gdSignup.png; path = "../../../../../Desktop/HD2/Projects/Go DJ/Screenshots/gdSignup.png"; sourceTree = "<group>"; };
+		84634B881FD3177F00B47737 /* dropDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropDown.png; sourceTree = "<group>"; };
 		96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 		9691EDCF1FCE398F00421737 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84634B881FD3177F00B47737 /* dropDown.png */,
+				84634B841FD3118100B47737 /* gdSignup.png */,
 				84634B591FD2FFFB00B47737 /* bg.png */,
 				84634B651FD2FFFD00B47737 /* checkBox.png */,
 				84634B671FD2FFFE00B47737 /* checkmark.png */,
@@ -338,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84634B891FD3178000B47737 /* dropDown.png in Resources */,
 				84634B6E1FD3000000B47737 /* bg.png in Resources */,
 				84634B791FD3000000B47737 /* nextBtn.png in Resources */,
 				96F22A861FCCFF3600C5486D /* LaunchScreen.storyboard in Resources */,
@@ -359,6 +366,7 @@
 				84634B7A1FD3000000B47737 /* checkBox.png in Resources */,
 				84634B6F1FD3000000B47737 /* errorBoxBG.png in Resources */,
 				84634B7D1FD3000000B47737 /* logo.png in Resources */,
+				84634B851FD3118100B47737 /* gdSignup.png in Resources */,
 				84634B731FD3000000B47737 /* setupBtn.png in Resources */,
 				84634B711FD3000000B47737 /* fUsrnmBtn.png in Resources */,
 				84634B7C1FD3000000B47737 /* checkmark.png in Resources */,
