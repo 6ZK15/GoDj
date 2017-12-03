@@ -47,7 +47,18 @@ class TextFieldView: UITextField {
     
     func resetTextField(textField: UITextField) {
         textField.text = ""
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.clear.cgColor
+        border.frame = CGRect(x: 20, y: textField.frame.size.height - width, width:  textField.frame.size.width, height: textField.frame.size.height)
+        
+        border.borderWidth = width
+        border.borderColor = UIColor.clear.cgColor
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.masksToBounds = true
     }
-
+    
 }
+    
 

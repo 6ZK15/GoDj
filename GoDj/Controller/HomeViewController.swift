@@ -57,11 +57,13 @@ class HomeViewController: UIViewController {
         signInValidation()
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
+        resetLoginTextFields()
         showSignUpForm()
     }
     
     @IBAction func dropDownButtonPressed(_ sender: Any) {
         closeSignUpForm()
+        resetSignUpTextFields()
     }
     @IBAction func signUpButton2Pressed(_ sender: Any) {
         signUpValidation()
@@ -78,6 +80,16 @@ class HomeViewController: UIViewController {
         textField.setTextFieldDesign(textField: signUpVPTF, placeHolderString: "VERIFY PASSWORD")
     }
     
+    func resetSignUpTextFields() {
+        textField.resetTextField(textField: signUPUTF)
+        textField.resetTextField(textField: signUpVPTF)
+        textField.resetTextField(textField: signUpETF)
+        textField.resetTextField(textField: signUpPTF)
+    }
+    func resetLoginTextFields() {
+        textField.resetTextField(textField: loginPTF)
+        textField.resetTextField(textField: loginUTF)
+    }
     
     //Show Error Message Label
     func showHideErrorMessageView() {
