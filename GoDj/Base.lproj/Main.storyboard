@@ -205,7 +205,7 @@
                                         </constraints>
                                         <state key="normal" image="signUpBtn2.png"/>
                                         <connections>
-                                            <segue destination="vpb-mO-0yK" kind="show" id="Mgf-G3-D8F"/>
+                                            <action selector="signUpButton2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmr-07-gHk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -300,6 +300,7 @@
                         <outlet property="signUpBtn" destination="sWS-Pf-6mc" id="ArN-LP-fLe"/>
                         <outlet property="signUpBtn2" destination="g8O-T8-o6H" id="7cm-ks-mX8"/>
                         <outlet property="signUpETF" destination="gbM-a0-YQ9" id="Oy5-zD-7gW"/>
+                        <outlet property="signUpPTF" destination="uoP-jX-dJS" id="n2m-oG-WBW"/>
                         <outlet property="signUpVPTF" destination="DoC-eE-WGG" id="aZO-dt-I6u"/>
                         <outlet property="signUpView" destination="KK6-RQ-FMW" id="2Su-JH-auj"/>
                     </connections>
@@ -475,7 +476,7 @@ applications.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLh-VU-Bkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1269.5999999999999" y="67.916041979010501"/>
+            <point key="canvasLocation" x="1415" y="-39"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ryQ-nT-MAH">
