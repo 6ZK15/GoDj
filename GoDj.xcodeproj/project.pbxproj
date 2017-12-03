@@ -34,6 +34,7 @@
 		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		9659B1521FD3673000E7ABE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9659B1511FD3673000E7ABE4 /* GoogleService-Info.plist */; };
+		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
 		96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */; };
 		96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A7F1FCCFF3600C5486D /* Main.storyboard */; };
 		96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A821FCCFF3600C5486D /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
 		9659B1511FD3673000E7ABE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		969F3CF61FD394630054639C /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		96F22A781FCCFF3600C5486D /* GoDj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F22A801FCCFF3600C5486D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */,
+				969F3CF61FD394630054639C /* ColorCode.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969F3CF71FD394640054639C /* ColorCode.swift in Sources */,
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,

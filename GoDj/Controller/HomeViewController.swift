@@ -43,8 +43,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setTextFields()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +69,14 @@ class HomeViewController: UIViewController {
     
     
     //Functions
-    
+    func setTextFields() {
+        textField.setTextFieldDesign(textField: loginUTF, placeHolderString: "USERNAME")
+        textField.setTextFieldDesign(textField: loginPTF, placeHolderString: "PASSWORD")
+        textField.setTextFieldDesign(textField: signUPUTF, placeHolderString: "USERNAME")
+        textField.setTextFieldDesign(textField: signUpETF, placeHolderString: "EMAIL")
+        textField.setTextFieldDesign(textField: signUpPTF, placeHolderString: "PASSWORD")
+        textField.setTextFieldDesign(textField: signUpVPTF, placeHolderString: "VERIFY PASSWORD")
+    }
     
     
     //Show Error Message Label
