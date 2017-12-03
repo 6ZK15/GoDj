@@ -102,14 +102,14 @@ class HomeViewController: UIViewController {
         }
     }
     
-    //Sign Up Form Displays When Pressed
+    //Show Sign Up Form
     func showSignUpForm() {
         UIView.animate(withDuration: 1, animations: {
             self.signUpView.transform = CGAffineTransform.init(translationX: 0, y: -370)
         })
     }
     
-    //Sign Up Form closes when pressed
+    //Close Sign Up Form
     func closeSignUpForm() {
         UIView.animate(withDuration: 1, animations: {
             self.signUpView.transform = CGAffineTransform.init(translationX: 0, y: 667)
