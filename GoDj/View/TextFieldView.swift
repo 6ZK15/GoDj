@@ -22,7 +22,7 @@ class TextFieldView: UITextField {
         ]
         textField.layer.cornerRadius = 8
         textField.borderStyle = UITextBorderStyle.roundedRect
-        textField.textColor = colorClass.purpleColor
+        textField.textColor = colorClass.whiteColor
         textField.font = font
         textField.attributedPlaceholder = NSAttributedString(string: placeHolderString, attributes: attributes)
         

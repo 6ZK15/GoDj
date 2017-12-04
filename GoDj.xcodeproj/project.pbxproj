@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338B1A32FA76FEE411E6CACA /* Pods_GoDj_GoDjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFBA91C9BEC3C40096BFE84 /* Pods_GoDj_GoDjTests.framework */; };
 		3E4C1DFF35804D4DA567835B /* Pods_GoDjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C94588925389F02DCED4ED /* Pods_GoDjUITests.framework */; };
 		4486E920311C2E2516CAB98A /* Pods_GoDjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADF19C9BF4F02AF44CA03E7 /* Pods_GoDjTests.framework */; };
 		841EA9BB1FD39DEB00DA1BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841EA9BA1FD39DEA00DA1BA8 /* GoogleService-Info.plist */; };
@@ -37,6 +38,8 @@
 		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
+		969F3CF91FD451EE0054639C /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF81FD451EE0054639C /* DJ.swift */; };
+		969F3CFB1FD45A730054639C /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CFA1FD45A730054639C /* Client.swift */; };
 		96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */; };
 		96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A7F1FCCFF3600C5486D /* Main.storyboard */; };
 		96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A821FCCFF3600C5486D /* Assets.xcassets */; };
@@ -65,11 +68,13 @@
 
 /* Begin PBXFileReference section */
 		065DC422A7BF7B2DEBF3C91D /* Pods-GoDj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDj.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDj/Pods-GoDj.release.xcconfig"; sourceTree = "<group>"; };
+		096B0B75EF986F9A703138BD /* Pods-GoDj-GoDjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDj-GoDjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDj-GoDjTests/Pods-GoDj-GoDjTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DB6A0B8C0C5EDDB5EDBC2AF /* Pods-GoDjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDjUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDjUITests/Pods-GoDjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1ADF19C9BF4F02AF44CA03E7 /* Pods_GoDjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D14374D5F50085382780D8F /* Pods-GoDjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDjUITests/Pods-GoDjUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33C94588925389F02DCED4ED /* Pods_GoDjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6C9C53750D4EFBF3739884 /* Pods_GoDj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CFBA91C9BEC3C40096BFE84 /* Pods_GoDj_GoDjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDj_GoDjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBD3CCB03FBE149E7BD8719 /* Pods-GoDjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDjTests/Pods-GoDjTests.release.xcconfig"; sourceTree = "<group>"; };
 		841EA9BA1FD39DEA00DA1BA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		841EA9BC1FD3A37F00DA1BA8 /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
 		969F3CF61FD394630054639C /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
+		969F3CF81FD451EE0054639C /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
+		969F3CFA1FD45A730054639C /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		96F22A781FCCFF3600C5486D /* GoDj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F22A801FCCFF3600C5486D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 		96F22A9B1FCCFF3600C5486D /* GoDjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoDjUITests.swift; sourceTree = "<group>"; };
 		96F22A9D1FCCFF3600C5486D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D3F861D6F7C1583C0DBCF69 /* Pods-GoDj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDj/Pods-GoDj.debug.xcconfig"; sourceTree = "<group>"; };
+		A22CF61B1D379EC56ECF9B4C /* Pods-GoDj-GoDjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDj-GoDjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDj-GoDjTests/Pods-GoDj-GoDjTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6D9E231A9E5511E20C11488 /* Pods-GoDjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoDjTests/Pods-GoDjTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4486E920311C2E2516CAB98A /* Pods_GoDjTests.framework in Frameworks */,
+				338B1A32FA76FEE411E6CACA /* Pods_GoDj_GoDjTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +168,7 @@
 				4A6C9C53750D4EFBF3739884 /* Pods_GoDj.framework */,
 				1ADF19C9BF4F02AF44CA03E7 /* Pods_GoDjTests.framework */,
 				33C94588925389F02DCED4ED /* Pods_GoDjUITests.framework */,
+				7CFBA91C9BEC3C40096BFE84 /* Pods_GoDj_GoDjTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 				7EBD3CCB03FBE149E7BD8719 /* Pods-GoDjTests.release.xcconfig */,
 				2D14374D5F50085382780D8F /* Pods-GoDjUITests.debug.xcconfig */,
 				0DB6A0B8C0C5EDDB5EDBC2AF /* Pods-GoDjUITests.release.xcconfig */,
+				096B0B75EF986F9A703138BD /* Pods-GoDj-GoDjTests.debug.xcconfig */,
+				A22CF61B1D379EC56ECF9B4C /* Pods-GoDj-GoDjTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -179,6 +191,8 @@
 		96435C601FD1AD8F00E87BA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				969F3CF81FD451EE0054639C /* DJ.swift */,
+				969F3CFA1FD45A730054639C /* Client.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,9 +539,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoDjTests/Pods-GoDjTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -543,14 +560,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoDj/Pods-GoDj-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,10 +635,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				841EA9BD1FD3A37F00DA1BA8 /* TCViewController.swift in Sources */,
+				969F3CFB1FD45A730054639C /* Client.swift in Sources */,
 				969F3CF71FD394640054639C /* ColorCode.swift in Sources */,
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,
+				969F3CF91FD451EE0054639C /* DJ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

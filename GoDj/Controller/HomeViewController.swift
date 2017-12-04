@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import KeychainSwift
 
 class HomeViewController: UIViewController {
     
@@ -38,23 +39,30 @@ class HomeViewController: UIViewController {
     //Create TextField Object to access functions
     var textField = TextFieldView();
     
+    //Create ketchain object to handle sensitive data
+    let keychain = KeychainSwift()
+    
     //Firebase Database Reference
     var databaseReference = DatabaseReference.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFields()
+        setSwitchState()
+        getUserInfo()
     }
+    
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     //IBACtion Button Outlets
     @IBAction func signIn(_ sender: Any) {
         signInValidation()
+        setUserInfo()
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         resetLoginTextFields()
@@ -64,9 +72,15 @@ class HomeViewController: UIViewController {
     @IBAction func dropDownButtonPressed(_ sender: Any) {
         closeSignUpForm()
         resetSignUpTextFields()
+    
+        
     }
     @IBAction func signUpButton2Pressed(_ sender: Any) {
         signUpValidation()
+    }
+    
+    @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
+        setUserInfo()
     }
     
     
@@ -102,6 +116,8 @@ class HomeViewController: UIViewController {
         }
     }
     
+    /* Methods for Sign Up form */
+    
     //Show Sign Up Form
     func showSignUpForm() {
         UIView.animate(withDuration: 1, animations: {
@@ -115,6 +131,42 @@ class HomeViewController: UIViewController {
             self.signUpView.transform = CGAffineTransform.init(translationX: 0, y: 667)
         })
     }
+    
+    
+    
+    /* Methods for Remember me Switch */
+    
+    //Func for setting user Info to keys. This will be called when the switch action is pressed.
+    func setUserInfo(){
+        if rmSwitch.isOn == true {
+            keychain.set(true, forKey: "switchState")
+            keychain.set(loginUTF.text!, forKey: "SavedUserName")
+            keychain.set(loginPTF.text!, forKey: "SavedPassword")
+            rmSwitch.setOn(true, animated: true)
+        }
+        else if rmSwitch.isOn == false {
+            keychain.set(false, forKey: "switchState")
+            keychain.set("", forKey: "SavedUserName")
+            keychain.set("", forKey: "SavedPassword")
+        }
+    }
+    
+    //func for setting the state of the switch
+    func setSwitchState() {
+        if keychain.getBool("switchState") == false {
+            rmSwitch.setOn(false, animated: true)
+        } else if keychain.getBool("switchState") == true {
+            rmSwitch.setOn(true, animated: true)
+        }
+    }
+    
+    //Func for getting the information in the textfields based on
+    func getUserInfo() {
+        loginUTF.text = keychain.get("SavedUserName")
+        loginPTF.text = keychain.get("SavedPassword")
+    }
+    
+    /* Methods for Validating Sign in and Sign Up */
     
     //Validate SignUp
     func signUpValidation() {
@@ -167,6 +219,8 @@ class HomeViewController: UIViewController {
                 self.errorLabel.text = "User Successfully Signed Up"
                 user?.sendEmailVerification(completion: nil)
                 self.showHideErrorMessageView()
+                self.closeSignUpForm()
+                
             }
         })
         
@@ -178,13 +232,11 @@ class HomeViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: {
                 (user, error) in
                 if error == nil {
-                    
+                    self.errorLabel.text = "Logged In Successfully"
+                    self.showHideErrorMessageView()
                     print("User Authenticated successfully")
                     self.loginUTF.layer.borderWidth = 0
                     self.loginPTF.layer.borderWidth = 0
-                    
-                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
-                
                     UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUserUID")
                     print("%@", user?.email  as Any)
                     print("%@", Auth.auth().currentUser?.uid as Any)
