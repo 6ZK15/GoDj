@@ -20,16 +20,16 @@ class TextFieldView: UITextField {
             NSAttributedStringKey.foregroundColor: colorClass.whiteColor,
             NSAttributedStringKey.font : font
         ]
-        textField.layer.cornerRadius = 8
+        textField.layer.cornerRadius = 12
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.textColor = colorClass.whiteColor
         textField.font = font
         textField.attributedPlaceholder = NSAttributedString(string: placeHolderString, attributes: attributes)
         
         let border = CALayer()
-        let width = CGFloat(1.0)
+        let width = CGFloat(5)
         border.borderColor = UIColor.darkGray.cgColor
-        border.frame = CGRect(x: 20, y: textField.frame.size.height - width, width:  textField.frame.size.width, height: textField.frame.size.height)
+        border.frame = CGRect(x: 0, y: textField.frame.size.height + 3, width:  textField.frame.size.width + 40, height: textField.frame.size.height)
         
         border.borderWidth = width
         border.borderColor = colorClass.whiteColor.cgColor
@@ -45,17 +45,20 @@ class TextFieldView: UITextField {
         textField.layer.borderColor = colorClass.whiteColor.cgColor
     }
     
+    /*
+     * UITextField: Reset Style
+     */
     func resetTextField(textField: UITextField) {
         textField.text = ""
         
         let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.clear.cgColor
-        border.frame = CGRect(x: 20, y: textField.frame.size.height - width, width:  textField.frame.size.width, height: textField.frame.size.height)
+        let width = CGFloat(5)
+        border.frame = CGRect(x: 20, y: textField.frame.size.height + 3, width:  textField.frame.size.width + 20, height: textField.frame.size.height)
         
         border.borderWidth = width
         border.borderColor = UIColor.clear.cgColor
         textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
     }
     

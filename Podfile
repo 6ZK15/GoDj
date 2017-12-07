@@ -12,7 +12,7 @@ target 'GoDj' do
   pod 'Firebase/Auth'	
   pod 'Firebase/Storage'
   pod 'KeychainSwift', '~> 10.0'
-   pod 'SwiftKeychainWrapper', '~> 3.0'
+  pod 'SwiftKeychainWrapper', '~> 3.0'
 
 
 		
