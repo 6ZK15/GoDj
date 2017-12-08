@@ -35,6 +35,11 @@
 		84634B801FD3000000B47737 /* tcCellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6B1FD2FFFF00B47737 /* tcCellBG.png */; };
 		84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6C1FD3000000B47737 /* uploadPicBtn.png */; };
 		84634B891FD3178000B47737 /* dropDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B881FD3177F00B47737 /* dropDown.png */; };
+		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
+		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
+		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
+		84B7E4161FD911E80099C681 /* gdTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4151FD911E80099C681 /* gdTitle.png */; };
+		84B7E4181FD940150099C681 /* disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4171FD940150099C681 /* disc.png */; };
 		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
@@ -101,6 +106,11 @@
 		84634B6B1FD2FFFF00B47737 /* tcCellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tcCellBG.png; sourceTree = "<group>"; };
 		84634B6C1FD3000000B47737 /* uploadPicBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uploadPicBtn.png; sourceTree = "<group>"; };
 		84634B881FD3177F00B47737 /* dropDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropDown.png; sourceTree = "<group>"; };
+		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
+		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
+		84B7E4151FD911E80099C681 /* gdTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gdTitle.png; sourceTree = "<group>"; };
+		84B7E4171FD940150099C681 /* disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc.png; sourceTree = "<group>"; };
 		96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -218,6 +228,11 @@
 		9691EDCF1FCE398F00421737 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84B7E4171FD940150099C681 /* disc.png */,
+				84B7E4151FD911E80099C681 /* gdTitle.png */,
+				84B7E40F1FD90F390099C681 /* bar.png */,
+				84B7E4111FD90F3A0099C681 /* loginBtn.png */,
+				84B7E4101FD90F390099C681 /* slide.png */,
 				84634B591FD2FFFB00B47737 /* bg.png */,
 				84634B651FD2FFFD00B47737 /* checkBox.png */,
 				84634B671FD2FFFE00B47737 /* checkmark.png */,
@@ -431,6 +446,7 @@
 				84634B771FD3000000B47737 /* titleBG.png in Resources */,
 				84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */,
 				84634B761FD3000000B47737 /* fPswBtn.png in Resources */,
+				84B7E4121FD90F3A0099C681 /* bar.png in Resources */,
 				841EA9BB1FD39DEB00DA1BA8 /* GoogleService-Info.plist in Resources */,
 				84634B721FD3000000B47737 /* signUpBG.png in Resources */,
 				84634B701FD3000000B47737 /* notUserLogin.png in Resources */,
@@ -441,11 +457,15 @@
 				84634B751FD3000000B47737 /* menuBtn.png in Resources */,
 				841EA9C01FD3B58B00DA1BA8 /* contractProposal.pdf in Resources */,
 				96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */,
+				84B7E4161FD911E80099C681 /* gdTitle.png in Resources */,
 				84634B7A1FD3000000B47737 /* checkBox.png in Resources */,
+				84B7E4131FD90F3A0099C681 /* slide.png in Resources */,
 				84634B6F1FD3000000B47737 /* errorBoxBG.png in Resources */,
 				84634B7D1FD3000000B47737 /* logo.png in Resources */,
+				84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */,
 				84634B731FD3000000B47737 /* setupBtn.png in Resources */,
 				84634B711FD3000000B47737 /* fUsrnmBtn.png in Resources */,
+				84B7E4181FD940150099C681 /* disc.png in Resources */,
 				84634B7C1FD3000000B47737 /* checkmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +517,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0FE182D31D242C627E60C28C /* [CP] Copy Pods Resources */ = {
@@ -530,7 +550,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		32F0D10A2EAC8AB4AF89E920 /* [CP] Embed Pods Frameworks */ = {
@@ -609,7 +629,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A6BAEAEDF2A284CCDB03446A /* [CP] Copy Pods Resources */ = {

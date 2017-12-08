@@ -13,7 +13,8 @@ import KeychainSwift
 
 class HomeViewController: UIViewController {
     
-    //IBOutlets for Sign Up page
+    //IBOutlets for Login View
+    @IBOutlet weak var loginView: UIView!
     @IBOutlet var loginUTF: UITextField!
     @IBOutlet var loginPTF: UITextField!
     @IBOutlet var signInBtn: UIButton!
@@ -21,20 +22,34 @@ class HomeViewController: UIViewController {
     @IBOutlet var signUpBtn: UIButton!
     @IBOutlet var fPswBtn: UIButton!
     @IBOutlet var fUsrnmBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var slideBarImg: UIImageView!
     
     //IBOutlets for Error MessageView
     @IBOutlet var errorMessageView: UIView!
     @IBOutlet var errorLabel: UILabel!
     
-    //IBOutlets for Sign UP
+    //IBOutlets for Sign Up View
     @IBOutlet var signUpView: UIView!
     @IBOutlet var dropDownBtn: UIButton!
     @IBOutlet var signUPUTF: UITextField!
     @IBOutlet var signUpETF: UITextField!
     @IBOutlet weak var signUpPTF: UITextField!
     @IBOutlet var signUpVPTF: UITextField!
+    @IBOutlet weak var signUpSQTF: UITextField!
+    @IBOutlet weak var signUpSATF: UITextField!
     @IBOutlet var scUserSelection: UISegmentedControl!
     @IBOutlet var signUpBtn2: UIButton!
+    
+    //IBOutlets for Forgot Password View
+    @IBOutlet weak var fPasswordView: UIView!
+    @IBOutlet weak var fpEmailTF: UITextField!
+    
+    //IBoutlets for Forgot Username View
+    @IBOutlet weak var fUsernameView: UIView!
+    @IBOutlet weak var fuEmailTF: UITextField!
+    @IBOutlet weak var fuSecurityQTF: UITextField!
+    @IBOutlet weak var fuSecurityATF: UITextField!
    
     //Create TextField Object to access functions
     var textField = TextFieldView();
@@ -59,39 +74,27 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //IBACtion Button Outlets
-    @IBAction func signIn(_ sender: Any) {
-        signInValidation()
-        setUserInfo()
-    }
-    @IBAction func signUpButtonPressed(_ sender: Any) {
-        resetLoginTextFields()
-        showSignUpForm()
-    }
+    /******************************************************************************************/
+    /************************************     Methods     *************************************/
+    /******************************************************************************************/
     
-    @IBAction func dropDownButtonPressed(_ sender: Any) {
-        closeSignUpForm()
-        resetSignUpTextFields()
-    
-        
-    }
-    @IBAction func signUpButton2Pressed(_ sender: Any) {
-        signUpValidation()
-    }
-    
-    @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
-        setUserInfo()
-    }
-    
-    
-    //Functions
+    // setTextFields: UITextfield methods Inherited from TextFieldView
     func setTextFields() {
+        //Login & Sign Up
         textField.setTextFieldDesign(textField: loginUTF, placeHolderString: "USERNAME")
         textField.setTextFieldDesign(textField: loginPTF, placeHolderString: "PASSWORD")
         textField.setTextFieldDesign(textField: signUPUTF, placeHolderString: "USERNAME")
         textField.setTextFieldDesign(textField: signUpETF, placeHolderString: "EMAIL")
         textField.setTextFieldDesign(textField: signUpPTF, placeHolderString: "PASSWORD")
         textField.setTextFieldDesign(textField: signUpVPTF, placeHolderString: "VERIFY PASSWORD")
+        textField.setTextFieldDesign(textField: signUpSQTF, placeHolderString: "SECURITY QUESTION")
+        textField.setTextFieldDesign(textField: signUpSATF, placeHolderString: "SECURITY ANSWER")
+        
+        //Forgot Password & Username
+        textField.setTextFieldDesign(textField: fpEmailTF, placeHolderString: "EMAIL")
+        textField.setTextFieldDesign(textField: fuEmailTF, placeHolderString: "EMAIL")
+        textField.setTextFieldDesign(textField: fuSecurityQTF, placeHolderString: "SECURITY QUESTION")
+        textField.setTextFieldDesign(textField: fuSecurityATF, placeHolderString: "SECURITY ANSWER")
     }
     
     func resetSignUpTextFields() {
@@ -108,10 +111,12 @@ class HomeViewController: UIViewController {
     //Show Error Message Label
     func showHideErrorMessageView() {
         UIView.animate(withDuration: 1, animations: {
-            self.errorMessageView.transform = CGAffineTransform.init(translationX: 0, y:60)
+            self.errorMessageView.transform = CGAffineTransform.init(translationX:
+                0, y: self.errorMessageView.frame.height)
         }) {(true) in
             UIView.animate(withDuration: 2, delay: 2, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                self.errorMessageView.transform = CGAffineTransform.init(translationX: 0, y: -60)
+                self.errorMessageView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0 - self.errorMessageView.frame.height)
             })
         }
     }
@@ -121,14 +126,16 @@ class HomeViewController: UIViewController {
     //Show Sign Up Form
     func showSignUpForm() {
         UIView.animate(withDuration: 1, animations: {
-            self.signUpView.transform = CGAffineTransform.init(translationX: 0, y: -370)
+            self.signUpView.transform = CGAffineTransform.init(translationX:
+                0, y: 0 - self.signUpView.frame.size.height)
         })
     }
     
     //Close Sign Up Form
     func closeSignUpForm() {
         UIView.animate(withDuration: 1, animations: {
-            self.signUpView.transform = CGAffineTransform.init(translationX: 0, y: 667)
+            self.signUpView.transform = CGAffineTransform.init(translationX:
+                0, y: self.signUpView.frame.size.height)
         })
     }
     
@@ -166,7 +173,93 @@ class HomeViewController: UIViewController {
         loginPTF.text = keychain.get("SavedPassword")
     }
     
-    /* Methods for Validating Sign in and Sign Up */
+    /******************************************************************************************/
+    /***********************************     IBActions     ************************************/
+    /******************************************************************************************/
+    
+    //IBACtion Button Outlets
+    @IBAction func signIn(_ sender: Any) {
+        signInValidation()
+        setUserInfo()
+    }
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        resetLoginTextFields()
+        showSignUpForm()
+    }
+    
+    @IBAction func dropDownButtonPressed(_ sender: Any) {
+        closeSignUpForm()
+        resetSignUpTextFields()
+    
+        
+    }
+    @IBAction func signUpButton2Pressed(_ sender: Any) {
+        signUpValidation()
+    }
+    
+    @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
+        setUserInfo()
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        if slideBarImg.frame.origin.x < view.frame.size.width/2 {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    self.slideBarImg.frame.size.width - self.slideBarImg.frame.origin.x, y: 0)
+                self.fPasswordView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        } else {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.fUsernameView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        }
+        
+        self.fPswBtn.isEnabled = true
+        self.loginBtn.isEnabled = false
+        self.fUsrnmBtn.isEnabled = true
+    }
+    
+    @IBAction func fPasswordButtonPressed(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                self.slideBarImg.frame.size.width - self.slideBarImg.frame.origin.x, y: 0)
+            self.loginView.transform = CGAffineTransform.init(translationX:
+                0 - self.view.frame.size.width, y: 0)
+            self.fPasswordView.transform = CGAffineTransform.init(translationX:
+                0 - self.view.frame.size.width, y: 0)
+        })
+        
+        self.fPswBtn.isEnabled = false
+        self.loginBtn.isEnabled = true
+        self.fUsrnmBtn.isEnabled = false
+    }
+    
+    @IBAction func fUsenameButtonPressed(_ sender: Any) {
+        UIView.animate(withDuration: 1, animations: {
+            self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                self.slideBarImg.frame.origin.x - self.slideBarImg.frame.size.width, y: 0)
+            self.loginView.transform = CGAffineTransform.init(translationX:
+                self.view.frame.size.width, y: 0)
+            self.fUsernameView.transform = CGAffineTransform.init(translationX:
+                self.view.frame.size.width, y: 0)
+        })
+        
+        self.fPswBtn.isEnabled = false
+        self.loginBtn.isEnabled = true
+        self.fUsrnmBtn.isEnabled = false
+    }
+    
+    /******************************************************************************************/
+    /***********************************    Validations    ************************************/
+    /******************************************************************************************/
     
     //Validate SignUp
     func signUpValidation() {
@@ -272,6 +365,4 @@ class HomeViewController: UIViewController {
             })
         }
     }
-}//End Class
-    
-
+}
