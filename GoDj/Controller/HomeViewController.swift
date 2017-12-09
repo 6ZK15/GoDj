@@ -57,6 +57,8 @@ class HomeViewController: UIViewController {
     //Create ketchain object to handle sensitive data
     let keychain = KeychainSwift()
     
+    var isDJ = Bool()
+    
     //Firebase Database Reference
     var databaseReference = DatabaseReference.init()
 
@@ -181,6 +183,8 @@ class HomeViewController: UIViewController {
     @IBAction func signIn(_ sender: Any) {
         signInValidation()
         setUserInfo()
+        checkUser()
+        
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         resetLoginTextFields()
@@ -199,6 +203,17 @@ class HomeViewController: UIViewController {
     
     @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
         setUserInfo()
+    }
+    @IBAction func userTypeSelected(_ sender: Any) {
+        if scUserSelection.selectedSegmentIndex == 0 {
+            isDJ = true
+            keychain.set(isDJ, forKey: "isDJ")
+            print("DJ Selected")
+        } else {
+            isDJ = false
+            keychain.set(isDJ, forKey: "isDJ")
+            print("Client selected")
+        }
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
@@ -263,6 +278,7 @@ class HomeViewController: UIViewController {
     
     //Validate SignUp
     func signUpValidation() {
+        print(keychain.getBool("isDJ")!)
         databaseReference = Database.database().reference()
         Auth.auth().createUser(withEmail: signUpETF.text!, password: signUpPTF.text!, completion: {user,error
             in
@@ -300,12 +316,23 @@ class HomeViewController: UIViewController {
                 return
            } else {
                 if self.scUserSelection.selectedSegmentIndex == 0 {
-                     let djDict = ["email":self.signUpETF.text, "username":self.signUpETF.text, "password":self.signUpPTF.text]
+                    //DJ Sign Up Dictionary
+                    print(self.scUserSelection.selectedSegmentIndex)
+                    let djDict = ["email":self.signUpETF.text!,
+                                  "username":self.signUpETF.text!,
+                                  "password":self.signUpPTF.text!,
+                                  "isDJ":self.scUserSelection.selectedSegmentIndex] as [String: Any]
                     self.databaseReference.child("djs").child(user!.uid).setValue(djDict)
-                } else {
-                    let userDict = ["email":self.signUpETF.text, "username":self.signUpETF.text, "password":self.signUpPTF.text]
+                    self.isDJ = true
+                    UserDefaults.standard.set(true, forKey: "isDJ")
+                } else  {
+                    print(self.scUserSelection.selectedSegmentIndex)
+                    let userDict = ["email":self.signUpETF.text!,
+                                    "username":self.signUpETF.text!,
+                                    "password":self.signUpPTF.text!,
+                                    "isDJ":self.scUserSelection.selectedSegmentIndex] as [String: Any]
                     self.databaseReference.child("clients").child(user!.uid).setValue(userDict)
-                    
+                    self.isDJ = false
                 }
                 self.signUpPTF.layer.borderColor = UIColor.clear.cgColor
                 self.signUpVPTF.layer.borderColor = UIColor.clear.cgColor
@@ -313,10 +340,22 @@ class HomeViewController: UIViewController {
                 user?.sendEmailVerification(completion: nil)
                 self.showHideErrorMessageView()
                 self.closeSignUpForm()
-                
             }
         })
         
+    }
+    
+    func checkUser() {
+        print("check user")
+        let currentUser = Auth.auth().currentUser?.uid
+        print(currentUser!)
+        let databaseRef = Database.database().reference().child("djs").child(currentUser!).child("isDJ")
+        databaseRef.observeSingleEvent(of: .value, with: {(snap) in
+            print(snap.value!)
+            //if snap.value == "0" {
+              //  print("Yes")
+           // }
+            })
     }
     
     //Validate SignIn function
@@ -332,7 +371,6 @@ class HomeViewController: UIViewController {
                     self.loginPTF.layer.borderWidth = 0
                     UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUserUID")
                     print("%@", user?.email  as Any)
-                    print("%@", Auth.auth().currentUser?.uid as Any)
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: {
                         (user, error) in
