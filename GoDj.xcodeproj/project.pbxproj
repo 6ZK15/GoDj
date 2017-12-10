@@ -35,6 +35,9 @@
 		84634B801FD3000000B47737 /* tcCellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6B1FD2FFFF00B47737 /* tcCellBG.png */; };
 		84634B811FD3000000B47737 /* uploadPicBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B6C1FD3000000B47737 /* uploadPicBtn.png */; };
 		84634B891FD3178000B47737 /* dropDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84634B881FD3177F00B47737 /* dropDown.png */; };
+		846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */; };
+		846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */; };
+		846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */; };
 		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
 		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
 		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
@@ -106,6 +109,9 @@
 		84634B6B1FD2FFFF00B47737 /* tcCellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tcCellBG.png; sourceTree = "<group>"; };
 		84634B6C1FD3000000B47737 /* uploadPicBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uploadPicBtn.png; sourceTree = "<group>"; };
 		84634B881FD3177F00B47737 /* dropDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropDown.png; sourceTree = "<group>"; };
+		846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameView.swift; sourceTree = "<group>"; };
+		846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
@@ -210,8 +216,11 @@
 		96435C611FD1AD9900E87BA3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */,
 				969F3CF61FD394630054639C /* ColorCode.swift */,
+				846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */,
+				846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */,
+				846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */,
+				96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -658,8 +667,11 @@
 				969F3CFB1FD45A730054639C /* Client.swift in Sources */,
 				969F3CF71FD394640054639C /* ColorCode.swift in Sources */,
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
+				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,
+				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
+				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,
 				969F3CF91FD451EE0054639C /* DJ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
