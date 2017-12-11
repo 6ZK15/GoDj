@@ -38,6 +38,7 @@
 		846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */; };
 		846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */; };
 		846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */; };
+		846E40E11FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */; };
 		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
 		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
 		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
@@ -112,6 +113,7 @@
 		846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameView.swift; sourceTree = "<group>"; };
 		846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentification.swift; sourceTree = "<group>"; };
 		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				969F3CF81FD451EE0054639C /* DJ.swift */,
 				969F3CFA1FD45A730054639C /* Client.swift */,
+				846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
 				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
+				846E40E11FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift in Sources */,
 				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,
