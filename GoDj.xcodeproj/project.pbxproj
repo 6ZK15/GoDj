@@ -38,7 +38,6 @@
 		846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */; };
 		846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */; };
 		846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */; };
-		846E40E11FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */; };
 		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
 		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
 		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
@@ -49,6 +48,7 @@
 		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
 		969F3CF91FD451EE0054639C /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF81FD451EE0054639C /* DJ.swift */; };
 		969F3CFB1FD45A730054639C /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CFA1FD45A730054639C /* Client.swift */; };
+		96C496E31FDE63AB003087DF /* FirebaseValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C496E21FDE63AB003087DF /* FirebaseValidation.swift */; };
 		96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */; };
 		96F22A811FCCFF3600C5486D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A7F1FCCFF3600C5486D /* Main.storyboard */; };
 		96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F22A821FCCFF3600C5486D /* Assets.xcassets */; };
@@ -113,7 +113,6 @@
 		846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameView.swift; sourceTree = "<group>"; };
 		846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentification.swift; sourceTree = "<group>"; };
 		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		969F3CF61FD394630054639C /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		969F3CF81FD451EE0054639C /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
 		969F3CFA1FD45A730054639C /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		96C496E21FDE63AB003087DF /* FirebaseValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseValidation.swift; sourceTree = "<group>"; };
 		96F22A781FCCFF3600C5486D /* GoDj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoDj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F22A801FCCFF3600C5486D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 			children = (
 				969F3CF81FD451EE0054639C /* DJ.swift */,
 				969F3CFA1FD45A730054639C /* Client.swift */,
-				846E40E01FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift */,
+				96C496E21FDE63AB003087DF /* FirebaseValidation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,12 +667,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				841EA9BD1FD3A37F00DA1BA8 /* TCViewController.swift in Sources */,
+				96C496E31FDE63AB003087DF /* FirebaseValidation.swift in Sources */,
 				969F3CFB1FD45A730054639C /* Client.swift in Sources */,
 				969F3CF71FD394640054639C /* ColorCode.swift in Sources */,
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
 				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
-				846E40E11FDDEF1F00ED0EA9 /* FirebaseAuthentification.swift in Sources */,
 				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,

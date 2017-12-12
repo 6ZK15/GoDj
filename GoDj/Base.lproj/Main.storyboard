@@ -37,7 +37,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6t-Kv-vTa" userLabel="Login View">
                                 <rect key="frame" x="0.0" y="166" width="375" height="346"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-6S-Ugk" userLabel="loginUTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-6S-Ugk" userLabel="loginUTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="86" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.2849422088547946" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -47,7 +47,7 @@
                                         <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtj-7Q-4d6" userLabel="loginPTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtj-7Q-4d6" userLabel="loginPTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="20" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -109,7 +109,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-UE-5pY" userLabel="fPassword View" customClass="ForgotPasswordView" customModule="GoDj" customModuleProvider="target">
                                 <rect key="frame" x="375" y="166" width="375" height="346"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrL-fM-xVP" userLabel="fpEmailTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrL-fM-xVP" userLabel="fpEmailTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="20" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -161,7 +161,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJ2-J7-amW" userLabel="fUsername View" customClass="ForgotUsernameView" customModule="GoDj" customModuleProvider="target">
                                 <rect key="frame" x="-375" y="166" width="375" height="346"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09w-8a-6ID" userLabel="fuEmailTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09w-8a-6ID" userLabel="fuEmailTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="20" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -171,7 +171,7 @@
                                         <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY QUESTION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-S6-hEP" userLabel="fuSecurityQTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY QUESTION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-S6-hEP" userLabel="fuSecurityQTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="115" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -181,7 +181,7 @@
                                         <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY ANSWER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-R4-N2b" userLabel="fuSecurityATF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY ANSWER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-R4-N2b" userLabel="fuSecurityATF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="181" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.60000000000002" y="67.916041979010501"/>
+            <point key="canvasLocation" x="3793" y="-1344"/>
         </scene>
         <!--TC View Controller-->
         <scene sceneID="Eji-EI-yqV">
@@ -688,7 +688,7 @@ APPLICATION.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLh-VU-Bkr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="68"/>
+            <point key="canvasLocation" x="4527" y="-1385"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ryQ-nT-MAH">

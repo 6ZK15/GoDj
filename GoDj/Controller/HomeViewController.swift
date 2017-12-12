@@ -51,13 +51,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var fuSecurityQTF: UITextField!
     @IBOutlet weak var fuSecurityATF: UITextField!
    
-    //Create TextField Object to access functions
-    var textField = TextFieldView();
+  
     
     //Create ketchain object to handle sensitive data
     let keychain = KeychainSwift()
     
     var isDJ = Bool()
+    
+    
+
     
     //Firebase Database Reference
     var databaseReference = DatabaseReference.init()
@@ -82,6 +84,8 @@ class HomeViewController: UIViewController {
     
     // setTextFields: UITextfield methods Inherited from TextFieldView
     func setTextFields() {
+        //Create TextField Object to access functions
+        let textField = TextFieldView()
         //Login & Sign Up
         textField.setTextFieldDesign(textField: loginUTF, placeHolderString: "USERNAME")
         textField.setTextFieldDesign(textField: loginPTF, placeHolderString: "PASSWORD")
@@ -100,12 +104,16 @@ class HomeViewController: UIViewController {
     }
     
     func resetSignUpTextFields() {
+        //Create TextField Object to access functions
+        let textField = TextFieldView()
         textField.resetTextField(textField: signUPUTF)
         textField.resetTextField(textField: signUpVPTF)
         textField.resetTextField(textField: signUpETF)
         textField.resetTextField(textField: signUpPTF)
     }
     func resetLoginTextFields() {
+        //Create TextField Object to access functions
+        let textField = TextFieldView()
         textField.resetTextField(textField: loginPTF)
         textField.resetTextField(textField: loginUTF)
     }
@@ -133,13 +141,7 @@ class HomeViewController: UIViewController {
         })
     }
     
-    //Close Sign Up Form
-    func closeSignUpForm() {
-        UIView.animate(withDuration: 1, animations: {
-            self.signUpView.transform = CGAffineTransform.init(translationX:
-                0, y: self.signUpView.frame.size.height)
-        })
-    }
+   
     
     
     
@@ -181,9 +183,9 @@ class HomeViewController: UIViewController {
     
     //IBACtion Button Outlets
     @IBAction func signIn(_ sender: Any) {
+        checkUser()
         signInValidation()
         setUserInfo()
-        checkUser()
         
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
@@ -192,28 +194,21 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dropDownButtonPressed(_ sender: Any) {
-        closeSignUpForm()
+        let suv = SignUpView()
+        suv.closeSignUpForm(signUpView: signUpView)
         resetSignUpTextFields()
     
         
     }
     @IBAction func signUpButton2Pressed(_ sender: Any) {
-        signUpValidation()
+        signUpValidation(email: signUpETF, username: signUPUTF, password: signUpPTF, vPassword: signUpVPTF, segment: scUserSelection)
     }
     
     @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
         setUserInfo()
     }
     @IBAction func userTypeSelected(_ sender: Any) {
-        if scUserSelection.selectedSegmentIndex == 0 {
-            isDJ = true
-            keychain.set(isDJ, forKey: "isDJ")
-            print("DJ Selected")
-        } else {
-            isDJ = false
-            keychain.set(isDJ, forKey: "isDJ")
-            print("Client selected")
-        }
+
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
@@ -277,89 +272,21 @@ class HomeViewController: UIViewController {
     /******************************************************************************************/
     
     //Validate SignUp
-    func signUpValidation() {
-        print(keychain.getBool("isDJ")!)
-        databaseReference = Database.database().reference()
-        Auth.auth().createUser(withEmail: signUpETF.text!, password: signUpPTF.text!, completion: {user,error
-            in
-            if let error = error {
-                self.errorLabel.text = error.localizedDescription
-                self.showHideErrorMessageView()
-                print(error)
-            } else if(self.signUpETF.text == "") {
-                self.textField.setErrorTextField(textField: self.signUpETF, borderWidth: 2)
-                self.errorLabel.text = "Please enter email address"
-                self.showHideErrorMessageView()
-                return
-            } else if(self.signUPUTF.text == "") {
-                self.textField.setErrorTextField(textField: self.signUPUTF, borderWidth: 2)
-                self.errorLabel.text = "Please enter username"
-                self.showHideErrorMessageView()
-                return
-            } else if(self.signUpPTF.text == "") {
-                self.textField.setErrorTextField(textField: self.signUPUTF, borderWidth: 2)
-                self.errorLabel.text = "Please enter password"
-                self.showHideErrorMessageView()
-                return
-            } else if(self.signUpVPTF.text == "") {
-                self.textField.setErrorTextField(textField: self.signUPUTF, borderWidth: 2)
-                self.errorLabel.text = "Please verify password"
-                self.showHideErrorMessageView()
-                return
-            }   else if (self.signUpPTF.text! != self.signUpVPTF.text!) {
-                self.textField.setErrorTextField(textField: self.signUpPTF, borderWidth: 2)
-                self.textField.setErrorTextField(textField: self.signUpVPTF, borderWidth: 2)
-                self.errorLabel.text = "Passwords do not match"
-                self.showHideErrorMessageView()
-                self.signUpVPTF.text = ""
-                self.signUpPTF.text = ""
-                return
-           } else {
-                if self.scUserSelection.selectedSegmentIndex == 0 {
-                    //DJ Sign Up Dictionary
-                    print(self.scUserSelection.selectedSegmentIndex)
-                    let djDict = ["email":self.signUpETF.text!,
-                                  "username":self.signUpETF.text!,
-                                  "password":self.signUpPTF.text!,
-                                  "isDJ":self.scUserSelection.selectedSegmentIndex] as [String: Any]
-                    self.databaseReference.child("djs").child(user!.uid).setValue(djDict)
-                    self.isDJ = true
-                    UserDefaults.standard.set(true, forKey: "isDJ")
-                } else  {
-                    print(self.scUserSelection.selectedSegmentIndex)
-                    let userDict = ["email":self.signUpETF.text!,
-                                    "username":self.signUpETF.text!,
-                                    "password":self.signUpPTF.text!,
-                                    "isDJ":self.scUserSelection.selectedSegmentIndex] as [String: Any]
-                    self.databaseReference.child("clients").child(user!.uid).setValue(userDict)
-                    self.isDJ = false
-                }
-                self.signUpPTF.layer.borderColor = UIColor.clear.cgColor
-                self.signUpVPTF.layer.borderColor = UIColor.clear.cgColor
-                self.errorLabel.text = "User Successfully Signed Up"
-                user?.sendEmailVerification(completion: nil)
-                self.showHideErrorMessageView()
-                self.closeSignUpForm()
+    func checkUser() {
+        let currentUser = Auth.auth().currentUser?.uid
+        print("The current user id is:" + currentUser!)
+        databaseReference.child("djs").observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChild(currentUser!){
+                print("this is a dj")
+                }else{
+                print("this is a client")
             }
         })
-        
-    }
-    
-    func checkUser() {
-        print("check user")
-        let currentUser = Auth.auth().currentUser?.uid
-        print(currentUser!)
-        let databaseRef = Database.database().reference().child("djs").child(currentUser!).child("isDJ")
-        databaseRef.observeSingleEvent(of: .value, with: {(snap) in
-            print(snap.value!)
-            //if snap.value == "0" {
-              //  print("Yes")
-           // }
-            })
     }
     
     //Validate SignIn function
     func signInValidation() {
+        let textField = TextFieldView()
         if let email = loginUTF.text, let pwd = loginPTF.text {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: {
                 (user, error) in
@@ -378,23 +305,23 @@ class HomeViewController: UIViewController {
                             print("Unable to authenticate using Email with Firebase")
                             if self.loginUTF.text == "", self.loginPTF.text == "" {
                                 self.errorLabel.text = "Please fill out the required fields."
-                                self.textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
-                                self.textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
                                 self.showHideErrorMessageView()
                             } else if self.loginUTF.text == "" {
                                 self.errorLabel.text = "Please enter username."
-                                self.textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
                                 self.loginPTF.layer.borderWidth = 0
                                 self.showHideErrorMessageView()
                             } else if self.loginPTF.text == "" {
                                 self.errorLabel.text = "Please enter password."
                                 self.loginUTF.layer.borderWidth = 0
-                                self.textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
                                 self.showHideErrorMessageView()
                             } else {
                                 self.errorLabel.text = "Incorrect username and password. Please try again."
-                                self.textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
-                                self.textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
                                 self.showHideErrorMessageView()
                             }
                         }
@@ -403,4 +330,74 @@ class HomeViewController: UIViewController {
             })
         }
     }
-}
+    
+    func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, segment: UISegmentedControl) {
+        let textField = TextFieldView()
+        databaseReference = Database.database().reference()
+    Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {user,error
+    in
+    if let error = error {
+        self.errorLabel.text = error.localizedDescription
+        self.showHideErrorMessageView()
+    print(error)
+    } else if(email.text == "") {
+        textField.setErrorTextField(textField: email, borderWidth: 2)
+        self.errorLabel.text = "Please enter email address"
+        self.showHideErrorMessageView()
+    return
+    } else if(username.text == "") {
+                    textField.setErrorTextField(textField: username, borderWidth: 2)
+        self.errorLabel.text = "Please enter username"
+        self.showHideErrorMessageView()
+                    return
+                } else if(password.text == "") {
+                    textField.setErrorTextField(textField: password, borderWidth: 2)
+        self.errorLabel.text = "Please enter password"
+        self.showHideErrorMessageView()
+                    return
+                } else if(vPassword.text == "") {
+                    textField.setErrorTextField(textField: username, borderWidth: 2)
+        self.errorLabel.text = "Please verify password"
+        self.showHideErrorMessageView()
+                    return
+                }   else if (password.text! != vPassword.text!) {
+                    textField.setErrorTextField(textField: password, borderWidth: 2)
+                    textField.setErrorTextField(textField: vPassword, borderWidth: 2)
+        self.errorLabel.text = "Passwords do not match"
+        self.showHideErrorMessageView()
+                    vPassword.text = ""
+                    password.text = ""
+                    return
+                } else {
+                    if segment.selectedSegmentIndex == 0 {
+                        //DJ Sign Up Dictionary
+                        print(segment.selectedSegmentIndex)
+                        self.self.isDJ = true
+                        let djDict = ["email":email.text!,
+                                      "username":email.text!,
+                                      "password":password.text!,
+                                      "isDJ":self.isDJ] as [String: Any]
+                        self.databaseReference.child("djs").child(user!.uid).setValue(djDict)
+                        UserDefaults.standard.set(true, forKey: "isDJ")
+                    } else  {
+                        print(segment.selectedSegmentIndex)
+                        self.self.isDJ = false
+                        let userDict = ["email":email.text!,
+                                        "username":email.text!,
+                                        "password":password.text!,
+                                        "isDJ":self.isDJ] as [String: Any]
+                        self.databaseReference.child("clients").child(user!.uid).setValue(userDict)
+                        
+                    }
+                    password.layer.borderColor = UIColor.clear.cgColor
+                    vPassword.layer.borderColor = UIColor.clear.cgColor
+                    self.errorLabel.text = "User Successfully Signed Up"
+                    user?.sendEmailVerification(completion: nil)
+                    self.showHideErrorMessageView()
+                    let suv = SignUpView()
+                    suv.closeSignUpForm(signUpView: self.signUpView)
+                }
+            })
+        }
+    }
+
