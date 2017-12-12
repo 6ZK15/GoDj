@@ -117,7 +117,7 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHu-Pc-0Ez" userLabel="infoText">
                                         <rect key="frame" x="29" y="74" width="317" height="120"/>
@@ -135,6 +135,9 @@
                                             <constraint firstAttribute="width" secondItem="0zJ-fD-PMV" secondAttribute="height" multiplier="181:54" id="b5H-C5-2rK"/>
                                         </constraints>
                                         <state key="normal" image="submitButton.png"/>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oyd-Zo-3nV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -169,18 +172,20 @@
                                         </constraints>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                        <connections>
+                                            <action selector="forgotUsernameTextEntered:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="HW6-zU-NIP"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY QUESTION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qc-S6-hEP" userLabel="fuSecurityQTF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bvy-JA-rx6" userLabel="fuSecurityLabel">
                                         <rect key="frame" x="29" y="115" width="317" height="46"/>
-                                        <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="8qc-S6-hEP" secondAttribute="height" multiplier="317:46" id="9Tw-9j-x9a"/>
+                                            <constraint firstAttribute="width" secondItem="Bvy-JA-rx6" secondAttribute="height" multiplier="317:46" id="NML-AE-AxN"/>
                                         </constraints>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SECURITY ANSWER" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-R4-N2b" userLabel="fuSecurityATF" customClass="TextFieldView" customModule="GoDj" customModuleProvider="target">
                                         <rect key="frame" x="29" y="181" width="317" height="46"/>
                                         <color key="backgroundColor" red="0.25932395460000002" green="0.06932581216" blue="0.60221922400000005" alpha="0.28494220889999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,20 +213,20 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="09w-8a-6ID" firstAttribute="top" secondItem="NJ2-J7-amW" secondAttribute="top" constant="20" id="14I-oL-R7b"/>
-                                    <constraint firstItem="5uH-R4-N2b" firstAttribute="top" secondItem="8qc-S6-hEP" secondAttribute="bottom" constant="20" id="20X-8A-1xn"/>
                                     <constraint firstAttribute="bottom" secondItem="8GD-1h-6Ex" secondAttribute="bottom" constant="20" id="7kK-lJ-BeJ"/>
                                     <constraint firstItem="09w-8a-6ID" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="29" id="7kv-Xz-jhH"/>
+                                    <constraint firstItem="5uH-R4-N2b" firstAttribute="top" secondItem="Bvy-JA-rx6" secondAttribute="bottom" constant="20" id="8rS-mm-dGq"/>
+                                    <constraint firstItem="Bvy-JA-rx6" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="29" id="F5K-xp-WwY"/>
                                     <constraint firstItem="5uH-R4-N2b" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="29" id="G9N-dP-oV8"/>
-                                    <constraint firstAttribute="trailing" secondItem="8qc-S6-hEP" secondAttribute="trailing" constant="29" id="LIj-fg-qmr"/>
                                     <constraint firstItem="ddE-Oj-62Y" firstAttribute="top" secondItem="09w-8a-6ID" secondAttribute="bottom" constant="8" id="NRb-Hl-6NT"/>
-                                    <constraint firstItem="8qc-S6-hEP" firstAttribute="top" secondItem="ddE-Oj-62Y" secondAttribute="bottom" constant="20" id="S9M-fG-HNE"/>
-                                    <constraint firstItem="8qc-S6-hEP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="29" id="dMg-ua-XVw"/>
                                     <constraint firstAttribute="trailing" secondItem="ddE-Oj-62Y" secondAttribute="trailing" constant="177" id="f1j-Ew-4hC"/>
                                     <constraint firstItem="8GD-1h-6Ex" firstAttribute="leading" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="97" id="saE-Iu-M6P"/>
                                     <constraint firstAttribute="trailing" secondItem="8GD-1h-6Ex" secondAttribute="trailing" constant="97" id="u9D-rV-cMq"/>
                                     <constraint firstAttribute="trailing" secondItem="09w-8a-6ID" secondAttribute="trailing" constant="29" id="vP5-M1-HI6"/>
                                     <constraint firstAttribute="trailing" secondItem="5uH-R4-N2b" secondAttribute="trailing" constant="29" id="vlV-CN-Nf7"/>
                                     <constraint firstItem="ddE-Oj-62Y" firstAttribute="leading" secondItem="NJ2-J7-amW" secondAttribute="leading" constant="177" id="xQ0-dU-Ica"/>
+                                    <constraint firstItem="Bvy-JA-rx6" firstAttribute="top" secondItem="ddE-Oj-62Y" secondAttribute="bottom" constant="20" id="xd8-lB-4m5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bvy-JA-rx6" secondAttribute="trailing" constant="29" id="y9b-nL-C0m"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-Pf-6mc" userLabel="signUp Btn">
@@ -502,7 +507,7 @@
                         <outlet property="fpEmailTF" destination="XrL-fM-xVP" id="mDA-BH-FPB"/>
                         <outlet property="fuEmailTF" destination="09w-8a-6ID" id="qeA-dK-m65"/>
                         <outlet property="fuSecurityATF" destination="5uH-R4-N2b" id="vob-pH-TRd"/>
-                        <outlet property="fuSecurityQTF" destination="8qc-S6-hEP" id="XbC-3Q-nYq"/>
+                        <outlet property="fuSecurityLabel" destination="Bvy-JA-rx6" id="rfw-ug-7Bx"/>
                         <outlet property="loginBtn" destination="RmY-LD-G7B" id="1SA-k5-SLY"/>
                         <outlet property="loginPTF" destination="xtj-7Q-4d6" id="Asq-KE-ibt"/>
                         <outlet property="loginUTF" destination="GWc-6S-Ugk" id="cKL-WM-iE9"/>

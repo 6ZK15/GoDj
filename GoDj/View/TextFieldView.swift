@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class TextFieldView: UITextField {
     
@@ -61,6 +63,8 @@ class TextFieldView: UITextField {
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
     }
+    
+   
     
 }
     

@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 import KeychainSwift
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate{
     
     //IBOutlets for Login View
     @IBOutlet weak var loginView: UIView!
@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
     //IBoutlets for Forgot Username View
     @IBOutlet weak var fUsernameView: UIView!
     @IBOutlet weak var fuEmailTF: UITextField!
-    @IBOutlet weak var fuSecurityQTF: UITextField!
+    @IBOutlet weak var fuSecurityLabel: UILabel!
     @IBOutlet weak var fuSecurityATF: UITextField!
    
   
@@ -99,7 +99,6 @@ class HomeViewController: UIViewController {
         //Forgot Password & Username
         textField.setTextFieldDesign(textField: fpEmailTF, placeHolderString: "EMAIL")
         textField.setTextFieldDesign(textField: fuEmailTF, placeHolderString: "EMAIL")
-        textField.setTextFieldDesign(textField: fuSecurityQTF, placeHolderString: "SECURITY QUESTION")
         textField.setTextFieldDesign(textField: fuSecurityATF, placeHolderString: "SECURITY ANSWER")
     }
     
@@ -117,6 +116,8 @@ class HomeViewController: UIViewController {
         textField.resetTextField(textField: loginPTF)
         textField.resetTextField(textField: loginUTF)
     }
+    
+    
     
     //Show Error Message Label
     func showHideErrorMessageView() {
@@ -177,6 +178,8 @@ class HomeViewController: UIViewController {
         loginPTF.text = keychain.get("SavedPassword")
     }
     
+   
+    
     /******************************************************************************************/
     /***********************************     IBActions     ************************************/
     /******************************************************************************************/
@@ -207,8 +210,57 @@ class HomeViewController: UIViewController {
     @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
         setUserInfo()
     }
+    @IBAction func forgotUsernameTextEntered(_ sender: Any) {
+        let textEntry = fuEmailTF.text!
+        databaseReference.child("djs").observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChild(textEntry){
+                print("The email exists")
+            } else {
+                print("The email does not exist")
+            }
+        })
+    }
+    
+    
     @IBAction func userTypeSelected(_ sender: Any) {
 
+    }
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+        let textField = TextFieldView()
+        Auth.auth().sendPasswordReset(withEmail: self.fpEmailTF.text!, completion: {(error) in
+            if error != nil {
+                self.errorLabel.text = (error?.localizedDescription)!
+                textField.setErrorTextField(textField: self.fpEmailTF, borderWidth: 2)
+            } else {
+                self.errorLabel.text = "Password reset has been sent"
+                self.showHideErrorMessageView();
+                self.fpEmailTF.text = ""
+                self.fpEmailTF.layer.borderColor = UIColor.clear.cgColor
+            }
+        })
+        if slideBarImg.frame.origin.x < view.frame.size.width/2 {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    self.slideBarImg.frame.size.width - self.slideBarImg.frame.origin.x, y: 0)
+                self.fPasswordView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        } else {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.fUsernameView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        }
+        
+        self.fPswBtn.isEnabled = true
+        self.loginBtn.isEnabled = false
+        self.fUsrnmBtn.isEnabled = true
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
