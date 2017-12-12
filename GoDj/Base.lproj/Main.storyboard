@@ -404,6 +404,7 @@
                                         <state key="normal" image="signUpBtn2.png"/>
                                         <connections>
                                             <action selector="signUpButton2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmr-07-gHk"/>
+                                            <segue destination="vpb-mO-0yK" kind="show" identifier="tcSegue" id="kYq-mQ-5pa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -523,12 +524,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3793" y="-1344"/>
+            <point key="canvasLocation" x="3839" y="-1386"/>
         </scene>
         <!--TC View Controller-->
         <scene sceneID="Eji-EI-yqV">
             <objects>
-                <viewController id="vpb-mO-0yK" userLabel="TC View Controller" customClass="TCViewController" customModule="GoDj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vpb-mO-0yK" userLabel="TC View Controller" customClass="TCViewController" customModule="GoDj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="loM-K8-1FP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

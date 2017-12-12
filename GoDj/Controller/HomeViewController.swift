@@ -271,7 +271,7 @@ class HomeViewController: UIViewController {
     /***********************************    Validations    ************************************/
     /******************************************************************************************/
     
-    //Validate SignUp
+    
     func checkUser() {
         let currentUser = Auth.auth().currentUser?.uid
         print("The current user id is:" + currentUser!)
@@ -374,21 +374,21 @@ class HomeViewController: UIViewController {
                         print(segment.selectedSegmentIndex)
                         self.self.isDJ = true
                         let djDict = ["email":email.text!,
-                                      "username":email.text!,
+                                      "username":username.text!,
                                       "password":password.text!,
                                       "isDJ":self.isDJ] as [String: Any]
                         self.databaseReference.child("djs").child(user!.uid).setValue(djDict)
                         UserDefaults.standard.set(true, forKey: "isDJ")
-                    } else  {
+                    } else {
                         print(segment.selectedSegmentIndex)
                         self.self.isDJ = false
                         let userDict = ["email":email.text!,
-                                        "username":email.text!,
+                                        "username":username.text!,
                                         "password":password.text!,
                                         "isDJ":self.isDJ] as [String: Any]
                         self.databaseReference.child("clients").child(user!.uid).setValue(userDict)
-                        
                     }
+        
                     password.layer.borderColor = UIColor.clear.cgColor
                     vPassword.layer.borderColor = UIColor.clear.cgColor
                     self.errorLabel.text = "User Successfully Signed Up"
@@ -396,6 +396,17 @@ class HomeViewController: UIViewController {
                     self.showHideErrorMessageView()
                     let suv = SignUpView()
                     suv.closeSignUpForm(signUpView: self.signUpView)
+        
+        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
+                (user, error) in
+                if error == nil {
+                    //Push Segue to Terms & Conditions
+                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
+                }
+            })
+        }
+        
                 }
             })
         }
