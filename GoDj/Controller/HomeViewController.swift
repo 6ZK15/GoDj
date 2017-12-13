@@ -62,7 +62,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
 
     
     //Firebase Database Reference
-    var databaseReference = DatabaseReference.init()
+    lazy var DJS_REF = Database.database().reference().child("djs")
+
+    let databaseReference = DatabaseReference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -186,10 +188,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     
     //IBACtion Button Outlets
     @IBAction func signIn(_ sender: Any) {
-        checkUser()
         signInValidation()
         setUserInfo()
-        
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         resetLoginTextFields()
@@ -326,14 +326,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     
     func checkUser() {
         let currentUser = Auth.auth().currentUser?.uid
-        print("The current user id is:" + currentUser!)
-        databaseReference.child("djs").observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.hasChild(currentUser!){
-                print("this is a dj")
-                }else{
-                print("this is a client")
+         DJS_REF.observeSingleEvent(of: .value, with: {
+            (snapshop) in
+            if(snapshop.hasChild(currentUser!)){
+                print("THis is a dj")
+                let next = self.storyboard?.instantiateViewController(withIdentifier: "DJViewController") as! DJViewController
+                self.present(next, animated: true, completion: nil)
             }
         })
+        
     }
     
     //Validate SignIn function
@@ -350,6 +351,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                     self.loginPTF.layer.borderWidth = 0
                     UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUserUID")
                     print("%@", user?.email  as Any)
+                    self.checkUser()
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: {
                         (user, error) in
@@ -370,6 +372,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                                 self.loginUTF.layer.borderWidth = 0
                                 textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
                                 self.showHideErrorMessageView()
+                                return
                             } else {
                                 self.errorLabel.text = "Incorrect username and password. Please try again."
                                 textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
@@ -385,7 +388,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     
     func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, segment: UISegmentedControl) {
         let textField = TextFieldView()
-        databaseReference = Database.database().reference()
     Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {user,error
     in
     if let error = error {
