@@ -50,7 +50,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var fuEmailTF: UITextField!
     @IBOutlet weak var fuSecurityLabel: UILabel!
     @IBOutlet weak var fuSecurityATF: UITextField!
-   
+    @IBOutlet weak var fUsernameButton: UIButton!
+    
   
     
     //Create ketchain object to handle sensitive data
@@ -62,7 +63,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
 
     
     //Firebase Database Reference
+    lazy var REF = Database.database().reference()
     lazy var DJS_REF = Database.database().reference().child("djs")
+    lazy var CLIENTS_REF = Database.database().reference().child("clients")
+
 
     let databaseReference = DatabaseReference()
 
@@ -188,6 +192,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     
     //IBACtion Button Outlets
     @IBAction func signIn(_ sender: Any) {
+        print(REF)
         signInValidation()
         setUserInfo()
     }
@@ -204,23 +209,104 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
         
     }
     @IBAction func signUpButton2Pressed(_ sender: Any) {
-        signUpValidation(email: signUpETF, username: signUPUTF, password: signUpPTF, vPassword: signUpVPTF, segment: scUserSelection)
+        signUpValidation(email: signUpETF, username: signUPUTF, password: signUpPTF, vPassword: signUpVPTF,securityQuestion: signUpSQTF, securityAnswer: signUpSATF, segment: scUserSelection)
     }
     
     @IBAction func rememberMeSwitchTriggered(_ sender: UISwitch) {
         setUserInfo()
     }
-    @IBAction func forgotUsernameTextEntered(_ sender: Any) {
-        let textEntry = fuEmailTF.text!
-        databaseReference.child("djs").observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.hasChild(textEntry){
-                print("The email exists")
-            } else {
-                print("The email does not exist")
-            }
-        })
-    }
     
+    @IBAction func checkEmailButtonPressed(_ sender: Any) {
+        let checkEmail = fuEmailTF.text
+        if checkEmail == "" {
+            self.errorLabel.text = "Please enter email"
+            self.showHideErrorMessageView()
+        }
+        else if checkEmail != nil {
+            DJS_REF.queryOrdered(byChild: "email").queryEqual(toValue: checkEmail).observeSingleEvent(of: .value ) { (snapshot) in
+                if snapshot.exists() {
+                    print("You are in the DJ Database")
+                    for childSnap in snapshot.children.allObjects as! [DataSnapshot]{
+                        let securityQuestion = childSnap.childSnapshot(forPath: "securityQuestion").value
+                        self.fuSecurityLabel.text = (securityQuestion as! String)
+                    }
+                } else {
+                    self.CLIENTS_REF.queryOrdered(byChild: "email").queryEqual(toValue: checkEmail).observeSingleEvent(of: .value ) { (snapshot) in
+                        if snapshot.exists() {
+                            print("You are in the Client Database")
+                            for childSnap in snapshot.children.allObjects as! [DataSnapshot]{
+                                let securityQuestion = childSnap.childSnapshot(forPath: "securityQuestion").value
+                                self.fuSecurityLabel.text = (securityQuestion as! String)
+                            }
+                        } else {
+                            print("You are not in the DJ database")
+                            self.errorLabel.text = "Email does not exist"
+                            self.showHideErrorMessageView()
+                        }
+                    }
+                } //end snapshot
+            } // end check if email != nil
+        }
+    }
+
+
+    @IBAction func getUsernameButtonPressed(_ sender: Any) {
+        let checkEmail = fuEmailTF.text
+        let securityAnswer = fuSecurityATF.text
+        DJS_REF.queryOrdered(byChild: "email").queryEqual(toValue: checkEmail).observeSingleEvent(of: .value ) { (snapshot) in
+            if snapshot.exists() {
+                print("You are in the DJ Database")
+                for childSnap in snapshot.children.allObjects as! [DataSnapshot]{
+                    let securityQuestion = childSnap.childSnapshot(forPath: "securityQuestion").value
+                    let firebaseSecurityAnswer = childSnap.childSnapshot(forPath: "securityAnswer").value
+                    let firebaseUserName = childSnap.childSnapshot(forPath: "username").value
+                    self.fuSecurityLabel.text = (securityQuestion as! String)
+                    if securityAnswer == (firebaseSecurityAnswer as! String) {
+                        print("answers match")
+                       self.errorLabel.text = ("Your username is:  " + (firebaseUserName! as! String))
+                        self.showHideErrorMessageView()
+                        self.fuEmailTF.text = ""
+                        self.fuSecurityATF.text = ""
+                        self.fuSecurityLabel.text = "Security Question"
+                        break
+                    } else {
+                            self.fuSecurityATF.text = ""
+                            print("Wrong Answer buddy")
+                            self.errorLabel.text = "Security Answer is incorrect"
+                            self.showHideErrorMessageView()
+                        }
+                    }
+                }
+            }
+        
+            self.CLIENTS_REF.queryOrdered(byChild: "email").queryEqual(toValue: checkEmail).observeSingleEvent(of: .value ) { (snapshot) in
+                    if snapshot.exists() {
+                        print("You are in the Client Database")
+                        for childSnap in snapshot.children.allObjects as! [DataSnapshot]{
+                            let securityQuestion = childSnap.childSnapshot(forPath: "securityQuestion").value
+                            let firebaseSecurityAnswer = childSnap.childSnapshot(forPath: "securityAnswer").value
+                            let firebaseUserName = childSnap.childSnapshot(forPath: "username").value
+                            self.fuSecurityLabel.text = (securityQuestion as! String)
+                            if securityAnswer == (firebaseSecurityAnswer as! String) {
+                                print("answers match")
+                                self.errorLabel.text = ("Your username is:  " + (firebaseUserName! as! String))
+                                self.showHideErrorMessageView()
+                                self.fuEmailTF.text = ""
+                                self.fuSecurityATF.text = ""
+                                self.fuSecurityLabel.text = "Security Question"
+                                break
+                            } else {
+                                self.errorLabel.text = "Security Answer is incorrect"
+                                self.showHideErrorMessageView()
+                                self.fuSecurityATF.text = ""
+                                print("Wrong Answer buddy")
+                               
+                            }
+                        }
+                    }
+                }
+    }
+
     
     @IBAction func userTypeSelected(_ sender: Any) {
 
@@ -386,7 +472,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, segment: UISegmentedControl) {
+    func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, securityQuestion: UITextField, securityAnswer: UITextField, segment: UISegmentedControl) {
         let textField = TextFieldView()
     Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {user,error
     in
@@ -430,17 +516,21 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                         let djDict = ["email":email.text!,
                                       "username":username.text!,
                                       "password":password.text!,
+                                      "securityQuestion":securityQuestion.text!,
+                                      "securityAnswer": securityAnswer.text!,
                                       "isDJ":self.isDJ] as [String: Any]
-                        self.databaseReference.child("djs").child(user!.uid).setValue(djDict)
-                        UserDefaults.standard.set(true, forKey: "isDJ")
+                        self.DJS_REF.child(user!.uid).setValue(djDict)
+                        print("Successful add")
                     } else {
                         print(segment.selectedSegmentIndex)
                         self.self.isDJ = false
                         let userDict = ["email":email.text!,
                                         "username":username.text!,
                                         "password":password.text!,
+                                        "securityQuestion":securityQuestion.text!,
+                                        "securityAnswer": securityAnswer.text!,
                                         "isDJ":self.isDJ] as [String: Any]
-                        self.databaseReference.child("clients").child(user!.uid).setValue(userDict)
+                       self.CLIENTS_REF.child(user!.uid).setValue(userDict)
                     }
         
                     password.layer.borderColor = UIColor.clear.cgColor
@@ -451,18 +541,18 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                     let suv = SignUpView()
                     suv.closeSignUpForm(signUpView: self.signUpView)
         
-        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
-            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
-                (user, error) in
-                if error == nil {
-                    //Push Segue to Terms & Conditions
-                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
-                }
-            })
-        }
+//        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
+//            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
+//                (user, error) in
+//                if error == nil {
+//                    //Push Segue to Terms & Conditions
+//                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
+//                }
+//            })
+//        }
         
                 }
             })
         }
-    }
+}//END CLASS
 

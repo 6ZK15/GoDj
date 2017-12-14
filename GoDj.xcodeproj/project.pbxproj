@@ -44,7 +44,7 @@
 		84B7E4161FD911E80099C681 /* gdTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4151FD911E80099C681 /* gdTitle.png */; };
 		84B7E4181FD940150099C681 /* disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4171FD940150099C681 /* disc.png */; };
 		9604955F1FE191EB00945FCD /* DJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604955E1FE191EB00945FCD /* DJViewController.swift */; };
-		96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */; };
+		960495641FE1FD0300945FCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960495631FE1FD0300945FCD /* HomeViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
 		969F3CF91FD451EE0054639C /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF81FD451EE0054639C /* DJ.swift */; };
@@ -120,7 +120,7 @@
 		84B7E4151FD911E80099C681 /* gdTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gdTitle.png; sourceTree = "<group>"; };
 		84B7E4171FD940150099C681 /* disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc.png; sourceTree = "<group>"; };
 		9604955E1FE191EB00945FCD /* DJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJViewController.swift; sourceTree = "<group>"; };
-		96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		960495631FE1FD0300945FCD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		96435C8E1FD2686800E87BA3 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
 		969F3CF61FD394630054639C /* ColorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
@@ -233,9 +233,9 @@
 		96435C621FD1ADA400E87BA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				96435C6D1FD1D84600E87BA3 /* HomeViewController.swift */,
 				841EA9BC1FD3A37F00DA1BA8 /* TCViewController.swift */,
 				9604955E1FE191EB00945FCD /* DJViewController.swift */,
+				960495631FE1FD0300945FCD /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -677,10 +677,10 @@
 				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				9604955F1FE191EB00945FCD /* DJViewController.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
-				96435C6E1FD1D84600E87BA3 /* HomeViewController.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,
 				969F3CF91FD451EE0054639C /* DJ.swift in Sources */,
+				960495641FE1FD0300945FCD /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
