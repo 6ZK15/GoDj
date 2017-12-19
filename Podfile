@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+ # Uncomment the next line to define a global platform for your project
  platform :ios, '11.0'
 
 target 'GoDj' do
@@ -13,6 +13,12 @@ target 'GoDj' do
   pod 'Firebase/Storage'
   pod 'KeychainSwift', '~> 10.0'
   pod 'SwiftKeychainWrapper', '~> 3.0'
+  pod 'PBRevealViewController/Swift'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'SDWebImage', '~> 4.0'
+
+
 
 
 		

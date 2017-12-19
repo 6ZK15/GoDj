@@ -2,16 +2,21 @@
 //  DJViewController.swift
 //  GoDj
 //
-//  Created by Eric Dowdell on 12/13/17.
+//  Created by Eric Dowdell on 12/16/17.
 //  Copyright © 2017 Omega. All rights reserved.
 //
 
 import UIKit
 
-class DJViewController: UIViewController {
 
+class DJViewController: UIViewController {
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.menuSlide()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,15 +26,13 @@ class DJViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func menuSlide() {
+        if revealViewController() != nil {
+            menuBtn.target = revealViewController()
+            menuBtn.action = #selector(SWRevealViewController().revealToggle(_:))
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
-    */
-
+  
 }

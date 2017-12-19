@@ -60,7 +60,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     var isDJ = Bool()
     
     
-
     
     //Firebase Database Reference
     lazy var REF = Database.database().reference()
@@ -70,11 +69,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
 
     let databaseReference = DatabaseReference()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFields()
         setSwitchState()
         getUserInfo()
+        
     }
     
  
@@ -192,7 +193,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
     
     //IBACtion Button Outlets
     @IBAction func signIn(_ sender: Any) {
-        print(REF)
         signInValidation()
         setUserInfo()
     }
@@ -299,6 +299,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                                 self.errorLabel.text = "Security Answer is incorrect"
                                 self.showHideErrorMessageView()
                                 self.fuSecurityATF.text = ""
+
                                 print("Wrong Answer buddy")
                                
                             }
@@ -416,8 +417,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
             (snapshop) in
             if(snapshop.hasChild(currentUser!)){
                 print("THis is a dj")
-                let next = self.storyboard?.instantiateViewController(withIdentifier: "DJViewController") as! DJViewController
+                let next = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
                 self.present(next, animated: true, completion: nil)
+           
             }
         })
         
@@ -541,15 +543,15 @@ class HomeViewController: UIViewController, UITextFieldDelegate{
                     let suv = SignUpView()
                     suv.closeSignUpForm(signUpView: self.signUpView)
         
-//        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
-//            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
-//                (user, error) in
-//                if error == nil {
-//                    //Push Segue to Terms & Conditions
-//                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
-//                }
-//            })
-//        }
+        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
+                (user, error) in
+                if error == nil {
+                    //Push Segue to Terms & Conditions
+                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
+                }
+            })
+        }
         
                 }
             })
