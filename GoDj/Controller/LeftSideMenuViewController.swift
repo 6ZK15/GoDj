@@ -60,7 +60,11 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         let cell: LeftSlideMenuTableViewCell =  tableView.cellForRow(at: indexPath) as! LeftSlideMenuTableViewCell
         //let mainstoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if cell.menuTitle.text! == "Logout" {
+        if cell.menuTitle.text! == "Home" {
+            print("Settings Tapped")
+            
+            
+        } else if cell.menuTitle.text! == "Logout" {
             print("Logout Tapped")
             if Auth.auth().currentUser != nil {
                 do {
@@ -75,9 +79,14 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
             
         } else if cell.menuTitle.text! == "Settings" {
             print("Settings Tapped")
-            let next = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-            self.present(next, animated: true, completion: nil)
-            }
+            
+            let revealviewcontroller:SWRevealViewController = self.revealViewController()
+            let newViewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+            let newFrontController = UINavigationController.init(rootViewController: newViewcontroller)
+            revealviewcontroller.pushFrontViewController(newFrontController, animated: true)
+            newFrontController.navigationBar.isHidden = true
+            
+        }
     }
     @IBAction func uploadProfilePic(_ sender: Any) {
         let picker = UIImagePickerController()

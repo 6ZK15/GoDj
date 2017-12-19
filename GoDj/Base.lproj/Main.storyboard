@@ -727,7 +727,7 @@ APPLICATION.</string>
         <!--View Controller-->
         <scene sceneID="52j-h9-CPH">
             <objects>
-                <viewController id="fa4-6I-dhM" customClass="ViewController" customModule="GoDj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="fa4-6I-dhM" customClass="ViewController" customModule="GoDj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyr-70-g7p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -955,7 +955,7 @@ APPLICATION.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eif-FF-WIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442" y="766"/>
+            <point key="canvasLocation" x="-420" y="716"/>
         </scene>
     </scenes>
     <resources>

@@ -13,7 +13,20 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        
+        let menuBtn = UIButton.init(type: UIButtonType.custom)
+        menuBtn.setImage(UIImage(named: "menuBtn.png"), for: UIControlState.normal)
+        menuBtn.frame = CGRect(x: 0, y: 0, width: 36, height: 36)
+        let leftBarButton = UIBarButtonItem(customView: menuBtn)
+        navigationItem.setLeftBarButton(leftBarButton, animated: true)
+        
+        if revealViewController() != nil {
+            menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControlEvents.touchUpInside)
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
     }
 
