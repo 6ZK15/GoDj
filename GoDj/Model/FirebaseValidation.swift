@@ -21,7 +21,7 @@ class FirebaseValidation: NSObject {
     
     //Validate SignUp
     func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, segment: UISegmentedControl) {
-        let hvc = HomeViewController()
+        let hvc = LoginViewController()
 
         //        print(keychain.getBool("isDJ")!)
         databaseReference = Database.database().reference()
