@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Alamofire
+import AlamofireImage
 import SDWebImage
 
 class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
@@ -86,7 +88,6 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
             
         }
     }
-    
     @IBAction func uploadProfilePic(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self

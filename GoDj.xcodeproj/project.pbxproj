@@ -10,7 +10,6 @@
 		338B1A32FA76FEE411E6CACA /* Pods_GoDj_GoDjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CFBA91C9BEC3C40096BFE84 /* Pods_GoDj_GoDjTests.framework */; };
 		3E4C1DFF35804D4DA567835B /* Pods_GoDjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C94588925389F02DCED4ED /* Pods_GoDjUITests.framework */; };
 		4486E920311C2E2516CAB98A /* Pods_GoDjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADF19C9BF4F02AF44CA03E7 /* Pods_GoDjTests.framework */; };
-		8413ED681FEA2F3400F73A60 /* LoginConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413ED671FEA2F3300F73A60 /* LoginConstraints.swift */; };
 		841EA9BB1FD39DEB00DA1BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 841EA9BA1FD39DEA00DA1BA8 /* GoogleService-Info.plist */; };
 		841EA9BD1FD3A37F00DA1BA8 /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841EA9BC1FD3A37F00DA1BA8 /* TCViewController.swift */; };
 		841EA9C01FD3B58B00DA1BA8 /* contractProposal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841EA9BF1FD3B58B00DA1BA8 /* contractProposal.pdf */; };
@@ -94,7 +93,6 @@
 		4A6C9C53750D4EFBF3739884 /* Pods_GoDj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFBA91C9BEC3C40096BFE84 /* Pods_GoDj_GoDjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoDj_GoDjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EBD3CCB03FBE149E7BD8719 /* Pods-GoDjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoDjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoDjTests/Pods-GoDjTests.release.xcconfig"; sourceTree = "<group>"; };
-		8413ED671FEA2F3300F73A60 /* LoginConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginConstraints.swift; sourceTree = "<group>"; };
 		841EA9BA1FD39DEA00DA1BA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		841EA9BC1FD3A37F00DA1BA8 /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		841EA9BF1FD3B58B00DA1BA8 /* contractProposal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = contractProposal.pdf; path = GoDj/PDFs/contractProposal.pdf; sourceTree = SOURCE_ROOT; };
@@ -228,9 +226,8 @@
 		96435C601FD1AD8F00E87BA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				969F3CFA1FD45A730054639C /* Client.swift */,
-				8413ED671FEA2F3300F73A60 /* LoginConstraints.swift */,
 				969F3CF81FD451EE0054639C /* DJ.swift */,
+				969F3CFA1FD45A730054639C /* Client.swift */,
 				96C496E21FDE63AB003087DF /* FirebaseValidation.swift */,
 			);
 			path = Model;
@@ -715,7 +712,6 @@
 				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				964648661FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift in Sources */,
 				96B8E8141FE5CD23009B6EE8 /* DJViewController.swift in Sources */,
-				8413ED681FEA2F3400F73A60 /* LoginConstraints.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,

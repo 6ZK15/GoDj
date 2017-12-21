@@ -13,6 +13,9 @@ target 'GoDj' do
   pod 'Firebase/Storage'
   pod 'KeychainSwift', '~> 10.0'
   pod 'SwiftKeychainWrapper', '~> 3.0'
+  pod 'PBRevealViewController/Swift'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'SDWebImage', '~> 4.0'
 
 
