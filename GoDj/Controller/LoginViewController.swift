@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  LoginViewController.swift
 //  GoDj
 //
 //  Created by Eric Dowdell on 12/1/17.
@@ -44,6 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     //IBOutlets for Forgot Password View
     @IBOutlet weak var fPasswordView: UIView!
     @IBOutlet weak var fpEmailTF: UITextField!
+    @IBOutlet weak var fpSubmitBtn: UIButton!
     
     //IBoutlets for Forgot Username View
     @IBOutlet weak var fUsernameView: UIView!
@@ -51,15 +52,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var fuSecurityLabel: UILabel!
     @IBOutlet weak var fuSecurityATF: UITextField!
     @IBOutlet weak var fUsernameButton: UIButton!
-    
-  
+    @IBOutlet weak var fuSubmitBtn: UIButton!
     
     //Create ketchain object to handle sensitive data
     let keychain = KeychainSwift()
     
     var isDJ = Bool()
-    
-    
     
     //Firebase Database Reference
     lazy var REF = Database.database().reference()
@@ -68,14 +66,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
 
     let databaseReference = DatabaseReference()
-
+    var loginConstraints = LoginConstraints()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextFields()
         setSwitchState()
         getUserInfo()
-        
+        updateConstraints()
     }
     
  
@@ -136,6 +135,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 self.errorMessageView.transform = CGAffineTransform.init(translationX:
                     0, y: 0 - self.errorMessageView.frame.height)
             })
+        }
+    }
+    
+    func updateConstraints() {
+        let mainScreenHeight = UIScreen.main.bounds.size.height
+        let mainScreenWidth = UIScreen.main.bounds.size.width
+        
+        // Login
+        if ((mainScreenHeight == 812) && (mainScreenWidth == 375)) {
+            print("iPhone X")
+            loginConstraints.adjustTextField(textField: loginUTF, y: 120)
+            loginConstraints.adjustTextField(textField: loginPTF, y: loginUTF.frame.origin.y + loginPTF.frame.size.height + 20)
+            loginConstraints.adjustSignInSubmitButton(signInBtn: signInBtn, rememberMeSwitch: rmSwitch)
+        } else {
+            loginConstraints.adjustTextField(textField: loginUTF, y: 40)
+            loginConstraints.adjustTextField(textField: loginPTF, y: loginUTF.frame.origin.y + loginPTF.frame.size.height + 20)
+            loginConstraints.adjustSignInSubmitButton(signInBtn: signInBtn, rememberMeSwitch: rmSwitch)
+            
+            //Forgot Password
+            loginConstraints.adjustTextField(textField: fpEmailTF, y: 40)
+            loginConstraints.adjustForgotUsernameSubmitButton(fuSubmitBtn: fuSubmitBtn, fuSecurityQLabel: fuSecurityLabel)
+            
+            //Forgot Username
+            loginConstraints.adjustTextField(textField: fuEmailTF, y: 40)
+            loginConstraints.adjustTextField(textField: fuSecurityATF, y: fuEmailTF.frame.origin.y + fuSecurityATF.frame.size.height + 20)
         }
     }
     

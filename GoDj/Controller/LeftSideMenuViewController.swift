@@ -59,11 +59,7 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         //let mainstoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         if cell.menuTitle.text! == "Home" {
-            let revealviewcontroller:SWRevealViewController = self.revealViewController()
-            let newViewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "DJProfileViewController") as! DJProfileViewController
-            let newFrontController = UINavigationController.init(rootViewController: newViewcontroller)
-            revealviewcontroller.pushFrontViewController(newFrontController, animated: true)
-            newFrontController.navigationBar.isHidden = true
+            print("Settings Tapped")
             
             
         } else if cell.menuTitle.text! == "Logout" {
@@ -90,6 +86,7 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
             
         }
     }
+    
     @IBAction func uploadProfilePic(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self

@@ -21,19 +21,19 @@ class FirebaseValidation: NSObject {
     
     //Validate SignUp
     func signUpValidation(email: UITextField, username: UITextField,  password: UITextField, vPassword: UITextField, segment: UISegmentedControl) {
-        let hvc = LoginViewController()
+        let lvc = LoginViewController()
 
         //        print(keychain.getBool("isDJ")!)
         databaseReference = Database.database().reference()
         Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: {user,error
             in
             if let error = error {
-                hvc.errorLabel.text = error.localizedDescription
-                hvc.showHideErrorMessageView()
+                lvc.errorLabel.text = error.localizedDescription
+                lvc.showHideErrorMessageView()
                 print(error)
             } else if(email.text == "") {
                 //                textField.setErrorTextField(textField: email, borderWidth: 2)
-                hvc.errorLabel.text = "Please enter email address"
+                lvc.errorLabel.text = "Please enter email address"
                 //                showHideErrorMessageView()
                 return
             } //else if(username.text == "") {

@@ -31,7 +31,7 @@ class TextFieldView: UITextField {
         let border = CALayer()
         let width = CGFloat(5)
         border.borderColor = UIColor.darkGray.cgColor
-        border.frame = CGRect(x: 0, y: textField.frame.size.height + 3, width:  textField.frame.size.width + 40, height: textField.frame.size.height)
+        border.frame = CGRect(x: 0, y: textField.frame.size.height - 3, width:  textField.frame.size.width + 40, height: textField.frame.size.height)
         
         border.borderWidth = width
         border.borderColor = colorClass.whiteColor.cgColor
