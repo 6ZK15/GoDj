@@ -1,7 +1,4 @@
 PODS:
-  - Alamofire (4.5.1)
-  - AlamofireImage (3.3.0):
-    - Alamofire (~> 4.5)
   - Firebase/Auth (4.0.4):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -61,7 +58,6 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - PBRevealViewController/Swift (1.2.9)
   - Protobuf (3.3.0)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
@@ -69,21 +65,16 @@ PODS:
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - AlamofireImage
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
   - KeychainSwift (~> 10.0)
-  - PBRevealViewController/Swift
   - SDWebImage (~> 4.0)
   - SwiftKeychainWrapper (~> 3.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -96,11 +87,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   KeychainSwift: f9f7910449a0c0fd2cabc889121530dd2c477c33
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  PBRevealViewController: 1ca9d511f1b0be4f6f5ca46046f86251be9cad9a
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: b223955f6a7b91017a1a177951b12284f7b7f98b
+PODFILE CHECKSUM: 79d32c0a44460580bddbd9bf5a5cd64bb7f4ef89
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0.beta.2

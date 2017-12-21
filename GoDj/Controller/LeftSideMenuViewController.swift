@@ -9,8 +9,6 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import Alamofire
-import AlamofireImage
 import SDWebImage
 
 class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
@@ -61,7 +59,11 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         //let mainstoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
         if cell.menuTitle.text! == "Home" {
-            print("Settings Tapped")
+            let revealviewcontroller:SWRevealViewController = self.revealViewController()
+            let newViewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "DJProfileViewController") as! DJProfileViewController
+            let newFrontController = UINavigationController.init(rootViewController: newViewcontroller)
+            revealviewcontroller.pushFrontViewController(newFrontController, animated: true)
+            newFrontController.navigationBar.isHidden = true
             
             
         } else if cell.menuTitle.text! == "Logout" {
@@ -69,7 +71,7 @@ class LeftSlideMenuViewController: UIViewController, UITableViewDelegate, UITabl
             if Auth.auth().currentUser != nil {
                 do {
                     try Auth.auth().signOut()
-                    let next = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                    let next = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
                     self.present(next, animated: true, completion: nil)
                     print("User successfully logged out")
                 } catch let error as NSError {
