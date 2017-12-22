@@ -48,17 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func autoLoginUser() {
         if Auth.auth().currentUser != nil {
             // User is signed in.
-            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
+            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "SWRevealViewController") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
+            self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
             
         } else {
-            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "LoginViewController")
+            //Send user to login screen
+            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
+            self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
             
         }
