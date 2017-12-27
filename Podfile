@@ -14,6 +14,9 @@ target 'GoDj' do
   pod 'KeychainSwift', '~> 10.0'
   pod 'SwiftKeychainWrapper', '~> 3.0'
   pod 'SDWebImage', '~> 4.0'
+  pod 'Eureka'
+  pod "SwiftPhoneNumberFormatter"
+
 
 
 

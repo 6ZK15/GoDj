@@ -461,9 +461,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     print("%@", user?.email  as Any)
                     self.checkUser()
                 } else {
-                    Auth.auth().createUser(withEmail: email, password: pwd, completion: {
-                        (user, error) in
-                        if error != nil {
                             print("Unable to authenticate using Email with Firebase")
                             if self.loginUTF.text == "", self.loginPTF.text == "" {
                                 self.errorLabel.text = "Please fill out the required fields."
@@ -487,8 +484,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                                 textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
                                 self.showHideErrorMessageView()
                             }
-                        }
-                    })
+                        
+                    
                 }
             })
         }
@@ -535,11 +532,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                         //DJ Sign Up Dictionary
                         print(segment.selectedSegmentIndex)
                         self.self.isDJ = true
+                        let currentUser = Auth.auth().currentUser?.uid
                         let djDict = ["email":email.text!,
                                       "username":username.text!,
                                       "password":password.text!,
                                       "securityQuestion":securityQuestion.text!,
                                       "securityAnswer": securityAnswer.text!,
+                                      "name": "",
+                                      "profilepic": "",
+                                      "bio":"",
+                                      "phone": "",
+                                      "uid": currentUser!,
                                       "isDJ":self.isDJ] as [String: Any]
                         self.DJS_REF.child(user!.uid).setValue(djDict)
                         print("Successful add")
@@ -563,15 +566,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     let suv = SignUpView()
                     suv.closeSignUpForm(signUpView: self.signUpView)
         
-        if let email = self.signUpETF.text, let pwd = self.signUpPTF.text {
-            Auth.auth().signIn(withEmail: email, password: pwd, completion: {
-                (user, error) in
-                if error == nil {
-                    //Push Segue to Terms & Conditions
-                    self.performSegue(withIdentifier: "tcSegue", sender: nil)
-                }
-            })
-        }
         
                 }
             })

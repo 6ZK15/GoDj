@@ -45,17 +45,17 @@
 		84B7E4161FD911E80099C681 /* gdTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4151FD911E80099C681 /* gdTitle.png */; };
 		84B7E4181FD940150099C681 /* disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4171FD940150099C681 /* disc.png */; };
 		960495641FE1FD0300945FCD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960495631FE1FD0300945FCD /* LoginViewController.swift */; };
+		962F52CA1FF2AF020036B00C /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F52C91FF2AF020036B00C /* EditDJProfileViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
 		9646485E1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646485D1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift */; };
 		964648601FE5DC03002F4C2D /* LeftSideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646485F1FE5DC03002F4C2D /* LeftSideMenuTableViewCell.swift */; };
-		964648621FE5DD1D002F4C2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964648611FE5DD1D002F4C2D /* ViewController.swift */; };
+		964648621FE5DD1D002F4C2D /* DJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964648611FE5DD1D002F4C2D /* DJProfileViewController.swift */; };
 		964648641FE5DDB2002F4C2D /* RightSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964648631FE5DDB2002F4C2D /* RightSlideMenuViewController.swift */; };
 		964648661FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964648651FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift */; };
 		9646486C1FE750B9002F4C2D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9646486B1FE750B9002F4C2D /* SettingsViewController.swift */; };
 		969F3CF71FD394640054639C /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF61FD394630054639C /* ColorCode.swift */; };
 		969F3CF91FD451EE0054639C /* DJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CF81FD451EE0054639C /* DJ.swift */; };
 		969F3CFB1FD45A730054639C /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F3CFA1FD45A730054639C /* Client.swift */; };
-		96B8E8141FE5CD23009B6EE8 /* DJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8E8131FE5CD23009B6EE8 /* DJViewController.swift */; };
 		96C496E31FDE63AB003087DF /* FirebaseValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C496E21FDE63AB003087DF /* FirebaseValidation.swift */; };
 		96F164B31FE5CFBF00E327B6 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F164B11FE5CFBE00E327B6 /* SWRevealViewController.m */; };
 		96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A7B1FCCFF3600C5486D /* AppDelegate.swift */; };
@@ -129,10 +129,11 @@
 		84B7E4151FD911E80099C681 /* gdTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gdTitle.png; sourceTree = "<group>"; };
 		84B7E4171FD940150099C681 /* disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc.png; sourceTree = "<group>"; };
 		960495631FE1FD0300945FCD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		962F52C91FF2AF020036B00C /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		9646485D1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideMenuViewController.swift; sourceTree = "<group>"; };
 		9646485F1FE5DC03002F4C2D /* LeftSideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSideMenuTableViewCell.swift; sourceTree = "<group>"; };
-		964648611FE5DD1D002F4C2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		964648611FE5DD1D002F4C2D /* DJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJProfileViewController.swift; sourceTree = "<group>"; };
 		964648631FE5DDB2002F4C2D /* RightSlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSlideMenuViewController.swift; sourceTree = "<group>"; };
 		964648651FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSlideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		9646486B1FE750B9002F4C2D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		969F3CF81FD451EE0054639C /* DJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJ.swift; sourceTree = "<group>"; };
 		969F3CFA1FD45A730054639C /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		96B8E80A1FE58ECB009B6EE8 /* GoDj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoDj-Bridging-Header.h"; sourceTree = "<group>"; };
-		96B8E8131FE5CD23009B6EE8 /* DJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJViewController.swift; sourceTree = "<group>"; };
 		96C496E21FDE63AB003087DF /* FirebaseValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseValidation.swift; sourceTree = "<group>"; };
 		96F164B11FE5CFBE00E327B6 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		96F164B21FE5CFBF00E327B6 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -253,13 +253,13 @@
 			children = (
 				841EA9BC1FD3A37F00DA1BA8 /* TCViewController.swift */,
 				960495631FE1FD0300945FCD /* LoginViewController.swift */,
-				96B8E8131FE5CD23009B6EE8 /* DJViewController.swift */,
 				9646485D1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift */,
 				9646485F1FE5DC03002F4C2D /* LeftSideMenuTableViewCell.swift */,
-				964648611FE5DD1D002F4C2D /* ViewController.swift */,
+				964648611FE5DD1D002F4C2D /* DJProfileViewController.swift */,
 				964648631FE5DDB2002F4C2D /* RightSlideMenuViewController.swift */,
 				964648651FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift */,
 				9646486B1FE750B9002F4C2D /* SettingsViewController.swift */,
+				962F52C91FF2AF020036B00C /* EditDJProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -558,7 +558,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0FE182D31D242C627E60C28C /* [CP] Copy Pods Resources */ = {
@@ -591,7 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		32F0D10A2EAC8AB4AF89E920 /* [CP] Embed Pods Frameworks */ = {
@@ -619,28 +619,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GoDj/Pods-GoDj-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/PBRevealViewController/PBRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftPhoneNumberFormatter/SwiftPhoneNumberFormatter.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PBRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftPhoneNumberFormatter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,7 +676,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6BAEAEDF2A284CCDB03446A /* [CP] Copy Pods Resources */ = {
@@ -711,17 +709,17 @@
 				9646486C1FE750B9002F4C2D /* SettingsViewController.swift in Sources */,
 				969F3CF71FD394640054639C /* ColorCode.swift in Sources */,
 				96F22A7C1FCCFF3600C5486D /* AppDelegate.swift in Sources */,
+				962F52CA1FF2AF020036B00C /* EditDJProfileViewController.swift in Sources */,
 				9646485E1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift in Sources */,
 				846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */,
 				964648661FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift in Sources */,
-				96B8E8141FE5CD23009B6EE8 /* DJViewController.swift in Sources */,
 				8413ED681FEA2F3400F73A60 /* LoginConstraints.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,
 				969F3CF91FD451EE0054639C /* DJ.swift in Sources */,
 				964648641FE5DDB2002F4C2D /* RightSlideMenuViewController.swift in Sources */,
-				964648621FE5DD1D002F4C2D /* ViewController.swift in Sources */,
+				964648621FE5DD1D002F4C2D /* DJProfileViewController.swift in Sources */,
 				960495641FE1FD0300945FCD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
