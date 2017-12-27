@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3401DD279394DEDDC1D40988F3225805'
-               BlueprintName = 'PBRevealViewController'
+               BlueprintIdentifier = 'DB598FC1BDD6A86901B16F6504BCC4A0'
+               BlueprintName = 'SwiftPhoneNumberFormatter'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PBRevealViewController.framework'>
+               BuildableName = 'SwiftPhoneNumberFormatter.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

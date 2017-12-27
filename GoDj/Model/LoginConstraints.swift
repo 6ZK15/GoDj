@@ -47,8 +47,8 @@ class LoginConstraints: NSObject {
         signInBtn.updateConstraints()
     }
     
-    func adjustForgotUsernameSubmitButton(fuSubmitBtn: UIButton, fuSecurityQLabel: UILabel) {
-        fuSubmitBtn.frame.origin.y = fuSecurityQLabel.frame.origin.y + fuSecurityQLabel.frame.height + 20
+    func adjustForgotUsernameSubmitButton(fuSubmitBtn: UIButton, fuSecurityQTF: UITextField) {
+        fuSubmitBtn.frame.origin.y = fuSecurityQTF.frame.origin.y + fuSecurityQTF.frame.height + 20
         fuSubmitBtn.center.x = UIScreen.main.bounds.width/2
         fuSubmitBtn.translatesAutoresizingMaskIntoConstraints = true
         fuSubmitBtn.updateConstraints()
