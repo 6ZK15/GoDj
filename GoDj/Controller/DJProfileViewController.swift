@@ -12,7 +12,8 @@ import Firebase
 
 class DJProfileViewController: UIViewController {
     
-    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var titleName: UILabel!
     @IBOutlet weak var alertButton: UIBarButtonItem!
     @IBOutlet var bioTextVIew: UITextView!
     @IBOutlet var usernameLabel: UILabel!
@@ -24,10 +25,27 @@ class DJProfileViewController: UIViewController {
         setProfilePic()
         setProfileInfo()
         super.viewDidLoad()
-        self.sideMenu()
+//        self.sideMenu()
         bioTextVIew.isEditable = false
+        setNavBar()
         
     }
+    
+    func setNavBar() {
+        if let uid = Auth.auth().currentUser?.uid{
+            DJS_REF.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                let dict = snapshot.value as! NSDictionary
+                let djName = dict["name"] as? String
+                self.titleName.text = djName
+            })
+        }
+        
+        if revealViewController() != nil {
+            menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControlEvents.touchUpInside)
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    
     func snapshot() {
         if let uid = Auth.auth().currentUser?.uid{
             DJS_REF.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -35,9 +53,7 @@ class DJProfileViewController: UIViewController {
                 let profileImageURL = dict["profilepic"] as? String
                 UserDefaults.standard.set(profileImageURL, forKey: "menuPic")
             })
-            
         }
-        
     }
     func setProfilePic() {
         if let uid = Auth.auth().currentUser?.uid{
@@ -67,19 +83,21 @@ class DJProfileViewController: UIViewController {
        
   
     }
-    func sideMenu() {
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 275
-            revealViewController().rightViewRevealWidth = 160
-            
-            alertButton.target = revealViewController()
-            alertButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
-    }
+    
+    
+//    func sideMenu() {
+//        if revealViewController() != nil {
+//            menuButton.target = revealViewController()
+//
+//            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+//            revealViewController().rearViewRevealWidth = 275
+//            revealViewController().rightViewRevealWidth = 160
+//
+//            alertButton.target = revealViewController()
+//            alertButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
+//            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        }
+//    }
     
 }
 
