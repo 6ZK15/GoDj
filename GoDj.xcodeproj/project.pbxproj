@@ -39,7 +39,6 @@
 		846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */; };
 		846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */; };
 		846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */; };
-		849D86BD1FF436F200E58664 /* menuBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D86BC1FF436F100E58664 /* menuBtn2.png */; };
 		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
 		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
 		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
@@ -125,7 +124,6 @@
 		846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameView.swift; sourceTree = "<group>"; };
 		846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		849D86BC1FF436F100E58664 /* menuBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBtn2.png; sourceTree = "<group>"; };
 		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
@@ -288,7 +286,6 @@
 				84634B5C1FD2FFFC00B47737 /* fUsrnmBtn.png */,
 				84634B681FD2FFFE00B47737 /* logo.png */,
 				84634B601FD2FFFC00B47737 /* menuBtn.png */,
-				849D86BC1FF436F100E58664 /* menuBtn2.png */,
 				84634B581FD2FFFB00B47737 /* navBarBG.png */,
 				84634B641FD2FFFD00B47737 /* nextBtn.png */,
 				84634B5B1FD2FFFC00B47737 /* notUserLogin.png */,
@@ -485,7 +482,6 @@
 				841EA9C21FD3B8A100DA1BA8 /* closeBtn.png in Resources */,
 				84634B891FD3178000B47737 /* dropDown.png in Resources */,
 				84634B6E1FD3000000B47737 /* bg.png in Resources */,
-				849D86BD1FF436F200E58664 /* menuBtn2.png in Resources */,
 				84634B791FD3000000B47737 /* nextBtn.png in Resources */,
 				96F22A861FCCFF3600C5486D /* LaunchScreen.storyboard in Resources */,
 				96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */,
