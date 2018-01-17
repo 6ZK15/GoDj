@@ -44,7 +44,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     //IBOutlets for Forgot Password View
     @IBOutlet weak var fPasswordView: UIView!
     @IBOutlet weak var fpEmailTF: UITextField!
-    @IBOutlet weak var fpInfoLabel: UILabel!
     @IBOutlet weak var fpSubmitBtn: UIButton!
     
     //IBoutlets for Forgot Username View
@@ -143,50 +142,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let mainScreenHeight = UIScreen.main.bounds.size.height
         let mainScreenWidth = UIScreen.main.bounds.size.width
         
+        // Login
         if ((mainScreenHeight == 812) && (mainScreenWidth == 375)) {
             print("iPhone X")
             loginConstraints.adjustTextField(textField: loginUTF, y: 120)
             loginConstraints.adjustTextField(textField: loginPTF, y: loginUTF.frame.origin.y + loginPTF.frame.size.height + 20)
             loginConstraints.adjustSignInSubmitButton(signInBtn: signInBtn, rememberMeSwitch: rmSwitch)
-        } else if ((mainScreenHeight == 736) && (mainScreenWidth == 414)) {
-            print("iPhone 6/7/8 Plus")
-            fuSecurityLabel.frame.origin.x = UIScreen.main.bounds.origin.x + 50
-            fuSecurityLabel.frame.origin.y = fUsernameButton.frame.origin.y + fUsernameButton.frame.size.height + 50
         } else {
-            //Login
+            loginConstraints.adjustTextField(textField: loginUTF, y: 40)
+            loginConstraints.adjustTextField(textField: loginPTF, y: loginUTF.frame.origin.y + loginPTF.frame.size.height + 20)
             loginConstraints.adjustSignInSubmitButton(signInBtn: signInBtn, rememberMeSwitch: rmSwitch)
             
             //Forgot Password
+            loginConstraints.adjustTextField(textField: fpEmailTF, y: 40)
+            loginConstraints.adjustForgotUsernameSubmitButton(fuSubmitBtn: fuSubmitBtn, fuSecurityQLabel: fuSecurityLabel)
             
-
             //Forgot Username
-            fuSecurityLabel.frame.origin.x = UIScreen.main.bounds.origin.x + 20
-            fuSecurityLabel.frame.origin.y = fUsernameButton.frame.origin.y + fUsernameButton.frame.size.height + 40
-            loginConstraints.adjustForgotUsernameSubmitButton(fuSubmitBtn: fuSubmitBtn, fuSecurityQTF: fuSecurityATF)
+            loginConstraints.adjustTextField(textField: fuEmailTF, y: 40)
+            loginConstraints.adjustTextField(textField: fuSecurityATF, y: fuEmailTF.frame.origin.y + fuSecurityATF.frame.size.height + 20)
         }
-        
-        loginConstraints.adjustTextField(textField: loginUTF, y: 40)
-        loginConstraints.adjustTextField(textField: loginPTF, y: loginUTF.frame.origin.y + loginPTF.frame.size.height + 20)
-        
-        loginConstraints.adjustFUTextField(textField: fpEmailTF, y: 40)
-        loginConstraints.adjustForgotPasswordSubmitButton(fpSubmitBtn: fpSubmitBtn, fpInfoLabel: fpInfoLabel)
-        fpInfoLabel.frame.origin.y = fpEmailTF.frame.origin.y + fpEmailTF.frame.size.height + 20
-        fpInfoLabel.translatesAutoresizingMaskIntoConstraints = true
-        fpInfoLabel.updateConstraints()
-        
-        loginConstraints.adjustFUTextField(textField: fuEmailTF, y: 40)
-        
-        fuSecurityLabel.translatesAutoresizingMaskIntoConstraints = true
-        fuSecurityLabel.updateConstraints()
-        
-        loginConstraints.adjustFUTextField(textField: fuSecurityATF, y: fuSecurityLabel.frame.origin.y + fuSecurityLabel.frame.size.height + 10)
-        
-        fUsernameButton.frame.size.width = 30
-        fUsernameButton.frame.size.height = 30
-        fUsernameButton.frame.origin.y = fuEmailTF.frame.origin.y + fuEmailTF.frame.size.height + 20
-        fUsernameButton.center.x = mainScreenWidth/2
-        fUsernameButton.translatesAutoresizingMaskIntoConstraints = true
-        fUsernameButton.updateConstraints()
     }
     
     /* Methods for Sign Up form */
@@ -208,7 +182,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             keychain.set(loginUTF.text!, forKey: "SavedUserName")
             keychain.set(loginPTF.text!, forKey: "SavedPassword")
             rmSwitch.setOn(true, animated: true)
-        } else if rmSwitch.isOn == false {
+        }
+        else if rmSwitch.isOn == false {
             keychain.set(false, forKey: "switchState")
             keychain.set("", forKey: "SavedUserName")
             keychain.set("", forKey: "SavedPassword")
@@ -230,6 +205,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         loginPTF.text = keychain.get("SavedPassword")
     }
     
+   
+    
     /******************************************************************************************/
     /***********************************     IBActions     ************************************/
     /******************************************************************************************/
@@ -241,7 +218,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         resetLoginTextFields()
-//        showSignUpForm()
+        showSignUpForm()
     }
     
     @IBAction func dropDownButtonPressed(_ sender: Any) {
@@ -306,7 +283,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     self.fuSecurityLabel.text = (securityQuestion as! String)
                     if securityAnswer == (firebaseSecurityAnswer as! String) {
                         print("answers match")
-                        self.errorLabel.text = ("Your username is:  " + (firebaseUserName! as! String))
+                       self.errorLabel.text = ("Your username is:  " + (firebaseUserName! as! String))
                         self.showHideErrorMessageView()
                         self.fuEmailTF.text = ""
                         self.fuSecurityATF.text = ""
@@ -368,25 +345,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 self.fpEmailTF.layer.borderColor = UIColor.clear.cgColor
             }
         })
-//        if slideBarImg.frame.origin.x < view.frame.size.width/2 {
-//            UIView.animate(withDuration: 1, animations: {
-//                self.slideBarImg.transform = CGAffineTransform.init(translationX:
-//                    self.slideBarImg.frame.size.width - self.slideBarImg.frame.origin.x, y: 0)
-//                self.fPasswordView.transform = CGAffineTransform.init(translationX:
-//                    0, y: 0)
-//                self.loginView.transform = CGAffineTransform.init(translationX:
-//                    0, y: 0)
-//            })
-//        } else {
-//            UIView.animate(withDuration: 1, animations: {
-//                self.slideBarImg.transform = CGAffineTransform.init(translationX:
-//                    0, y: 0)
-//                self.fUsernameView.transform = CGAffineTransform.init(translationX:
-//                    0, y: 0)
-//                self.loginView.transform = CGAffineTransform.init(translationX:
-//                    0, y: 0)
-//            })
-//        }
+        if slideBarImg.frame.origin.x < view.frame.size.width/2 {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    self.slideBarImg.frame.size.width - self.slideBarImg.frame.origin.x, y: 0)
+                self.fPasswordView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        } else {
+            UIView.animate(withDuration: 1, animations: {
+                self.slideBarImg.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.fUsernameView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+                self.loginView.transform = CGAffineTransform.init(translationX:
+                    0, y: 0)
+            })
+        }
         
         self.fPswBtn.isEnabled = true
         self.loginBtn.isEnabled = false
@@ -461,7 +438,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             if(snapshop.hasChild(currentUser!)){
                 print("THis is a dj")
                 let next = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
-                self.navigationController?.pushViewController(next, animated: true)
+                self.present(next, animated: true, completion: nil)
+           
             }
         })
         
@@ -483,29 +461,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     print("%@", user?.email  as Any)
                     self.checkUser()
                 } else {
-                    print("Unable to authenticate using Email with Firebase")
-                    if self.loginUTF.text == "", self.loginPTF.text == "" {
-                        self.errorLabel.text = "Please fill out the required fields."
-                        textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
-                        textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
-                        self.showHideErrorMessageView()
-                    } else if self.loginUTF.text == "" {
-                        self.errorLabel.text = "Please enter username."
-                        textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
-                        self.loginPTF.layer.borderWidth = 0
-                        self.showHideErrorMessageView()
-                    } else if self.loginPTF.text == "" {
-                        self.errorLabel.text = "Please enter password."
-                        self.loginUTF.layer.borderWidth = 0
-                        textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
-                        self.showHideErrorMessageView()
-                        return
-                    } else {
-                        self.errorLabel.text = "Incorrect username and password. Please try again."
-                        textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
-                        textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
-                        self.showHideErrorMessageView()
-                    }
+                            print("Unable to authenticate using Email with Firebase")
+                            if self.loginUTF.text == "", self.loginPTF.text == "" {
+                                self.errorLabel.text = "Please fill out the required fields."
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                self.showHideErrorMessageView()
+                            } else if self.loginUTF.text == "" {
+                                self.errorLabel.text = "Please enter username."
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                self.loginPTF.layer.borderWidth = 0
+                                self.showHideErrorMessageView()
+                            } else if self.loginPTF.text == "" {
+                                self.errorLabel.text = "Please enter password."
+                                self.loginUTF.layer.borderWidth = 0
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                self.showHideErrorMessageView()
+                                return
+                            } else {
+                                self.errorLabel.text = "Incorrect username and password. Please try again."
+                                textField.setErrorTextField(textField: self.loginUTF, borderWidth: 2)
+                                textField.setErrorTextField(textField: self.loginPTF, borderWidth: 2)
+                                self.showHideErrorMessageView()
+                            }
+                        
+                    
                 }
             })
         }

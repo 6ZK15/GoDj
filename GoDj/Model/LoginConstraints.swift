@@ -14,44 +14,17 @@ class LoginConstraints: NSObject {
     let mainScreenWidth = UIScreen.main.bounds.size.width
     
     func adjustTextField(textField: UITextField, y: CGFloat) {
-        if ((mainScreenHeight == 568) && (mainScreenWidth == 320)) {
-            print("iPhone 5/SE")
-            
-        } else if ((mainScreenHeight == 736) && (mainScreenWidth == 414)) {
-            print("iPhone 6/7/8 Plus")
-            textField.frame.size.width = mainScreenWidth - 80
-        } else if ((mainScreenHeight == 812) && (mainScreenWidth == 375)) {
-            print("iPhone X")
-            
-        } else {
-            textField.frame.size.width = UIScreen.main.bounds.width - 40
-        }
-        
+        textField.frame.origin = CGPoint.init(x: UIScreen.main.bounds.origin.x + 20 , y: y)
         textField.frame.size.height = 46
-        textField.center.x = mainScreenWidth/2
-        textField.frame.origin.y = y
-        
+        textField.frame.size.width = UIScreen.main.bounds.width - 40
         textField.translatesAutoresizingMaskIntoConstraints = true
         textField.updateConstraints()
     }
     
     func adjustFUTextField(textField: UITextField, y: CGFloat) {
-        if ((mainScreenHeight == 568) && (mainScreenWidth == 320)) {
-            print("iPhone 5/SE")
-            
-        } else if ((mainScreenHeight == 736) && (mainScreenWidth == 414)) {
-            print("iPhone 6/7/8 Plus")
-            textField.frame.size.width = mainScreenWidth - 80
-        } else if ((mainScreenHeight == 812) && (mainScreenWidth == 375)) {
-            print("iPhone X")
-            
-        } else {
-            textField.frame.size.width = mainScreenWidth - 40
-        }
-        
-        textField.center.x = mainScreenWidth/2
-        textField.frame.origin.y = y
+        textField.frame.origin = CGPoint.init(x: UIScreen.main.bounds.origin.x + 20 , y: y)
         textField.frame.size.height = 46
+        textField.frame.size.width = UIScreen.main.bounds.width - 40
         textField.translatesAutoresizingMaskIntoConstraints = true
         textField.updateConstraints()
     }
@@ -60,36 +33,28 @@ class LoginConstraints: NSObject {
         if ((mainScreenHeight == 568) && (mainScreenWidth == 320)) {
             print("iPhone 5/SE")
             signInBtn.frame.origin.y = rememberMeSwitch.frame.origin.y + rememberMeSwitch.frame.size.height + 30
-            
+            signInBtn.center.x = UIScreen.main.bounds.width/2
         } else if ((mainScreenHeight == 812) && (mainScreenWidth == 375)) {
             print("iPhone X")
             signInBtn.frame.origin.y = rememberMeSwitch.frame.origin.y + rememberMeSwitch.frame.size.height + 120
+            signInBtn.center.x = UIScreen.main.bounds.width/2
         } else {
             signInBtn.frame.origin.y = rememberMeSwitch.frame.origin.y + rememberMeSwitch.frame.size.height + 60
+            signInBtn.center.x = UIScreen.main.bounds.width/2
         }
         
-        signInBtn.center.x = mainScreenWidth/2
         signInBtn.translatesAutoresizingMaskIntoConstraints = true
         signInBtn.updateConstraints()
     }
     
     func adjustForgotUsernameSubmitButton(fuSubmitBtn: UIButton, fuSecurityQTF: UITextField) {
         fuSubmitBtn.frame.origin.y = fuSecurityQTF.frame.origin.y + fuSecurityQTF.frame.height + 20
-        fuSubmitBtn.center.x = mainScreenWidth/2
+        fuSubmitBtn.center.x = UIScreen.main.bounds.width/2
         fuSubmitBtn.translatesAutoresizingMaskIntoConstraints = true
         fuSubmitBtn.updateConstraints()
     }
     
-    func adjustForgotPasswordSubmitButton(fpSubmitBtn: UIButton, fpInfoLabel: UILabel) {
-        fpSubmitBtn.frame.origin.y = fpInfoLabel.frame.origin.y + fpInfoLabel.frame.height + 50
-        fpSubmitBtn.center.x = mainScreenWidth/2
-        fpSubmitBtn.translatesAutoresizingMaskIntoConstraints = true
-        fpSubmitBtn.updateConstraints()
-        
-        fpInfoLabel.center.x = mainScreenWidth/2
-        fpInfoLabel.translatesAutoresizingMaskIntoConstraints = true
-        fpInfoLabel.updateConstraints()
-    }
+    
     
     
     /*

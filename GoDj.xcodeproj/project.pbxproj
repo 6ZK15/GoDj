@@ -39,13 +39,11 @@
 		846E40DB1FDDE85900ED0EA9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */; };
 		846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */; };
 		846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */; };
-		849D86BD1FF436F200E58664 /* menuBtn2.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D86BC1FF436F100E58664 /* menuBtn2.png */; };
 		84B7E4121FD90F3A0099C681 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E40F1FD90F390099C681 /* bar.png */; };
 		84B7E4131FD90F3A0099C681 /* slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4101FD90F390099C681 /* slide.png */; };
 		84B7E4141FD90F3A0099C681 /* loginBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4111FD90F3A0099C681 /* loginBtn.png */; };
 		84B7E4161FD911E80099C681 /* gdTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4151FD911E80099C681 /* gdTitle.png */; };
 		84B7E4181FD940150099C681 /* disc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7E4171FD940150099C681 /* disc.png */; };
-		84F31DEC1FF9BD6200B2D902 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F31DEB1FF9BD6200B2D902 /* SignUpViewController.swift */; };
 		960495641FE1FD0300945FCD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960495631FE1FD0300945FCD /* LoginViewController.swift */; };
 		962F52CA1FF2AF020036B00C /* EditDJProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F52C91FF2AF020036B00C /* EditDJProfileViewController.swift */; };
 		96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */; };
@@ -125,13 +123,11 @@
 		846E40DA1FDDE85900ED0EA9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		846E40DC1FDDE86700ED0EA9 /* ForgotUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotUsernameView.swift; sourceTree = "<group>"; };
 		846E40DE1FDDE87600ED0EA9 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		849D86BC1FF436F100E58664 /* menuBtn2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBtn2.png; sourceTree = "<group>"; };
 		84B7E40F1FD90F390099C681 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		84B7E4101FD90F390099C681 /* slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slide.png; sourceTree = "<group>"; };
 		84B7E4111FD90F3A0099C681 /* loginBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBtn.png; sourceTree = "<group>"; };
 		84B7E4151FD911E80099C681 /* gdTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gdTitle.png; sourceTree = "<group>"; };
 		84B7E4171FD940150099C681 /* disc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disc.png; sourceTree = "<group>"; };
-		84F31DEB1FF9BD6200B2D902 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		960495631FE1FD0300945FCD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		962F52C91FF2AF020036B00C /* EditDJProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDJProfileViewController.swift; sourceTree = "<group>"; };
 		96435C7C1FD1ECA800E87BA3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
@@ -260,7 +256,6 @@
 				9646485D1FE5DB7C002F4C2D /* LeftSideMenuViewController.swift */,
 				9646485F1FE5DC03002F4C2D /* LeftSideMenuTableViewCell.swift */,
 				964648611FE5DD1D002F4C2D /* DJProfileViewController.swift */,
-				84F31DEB1FF9BD6200B2D902 /* SignUpViewController.swift */,
 				964648631FE5DDB2002F4C2D /* RightSlideMenuViewController.swift */,
 				964648651FE5DDE9002F4C2D /* RightSlideMenuTableViewCell.swift */,
 				9646486B1FE750B9002F4C2D /* SettingsViewController.swift */,
@@ -288,7 +283,6 @@
 				84634B5C1FD2FFFC00B47737 /* fUsrnmBtn.png */,
 				84634B681FD2FFFE00B47737 /* logo.png */,
 				84634B601FD2FFFC00B47737 /* menuBtn.png */,
-				849D86BC1FF436F100E58664 /* menuBtn2.png */,
 				84634B581FD2FFFB00B47737 /* navBarBG.png */,
 				84634B641FD2FFFD00B47737 /* nextBtn.png */,
 				84634B5B1FD2FFFC00B47737 /* notUserLogin.png */,
@@ -485,7 +479,6 @@
 				841EA9C21FD3B8A100DA1BA8 /* closeBtn.png in Resources */,
 				84634B891FD3178000B47737 /* dropDown.png in Resources */,
 				84634B6E1FD3000000B47737 /* bg.png in Resources */,
-				849D86BD1FF436F200E58664 /* menuBtn2.png in Resources */,
 				84634B791FD3000000B47737 /* nextBtn.png in Resources */,
 				96F22A861FCCFF3600C5486D /* LaunchScreen.storyboard in Resources */,
 				96F22A831FCCFF3600C5486D /* Assets.xcassets in Resources */,
@@ -723,7 +716,6 @@
 				8413ED681FEA2F3400F73A60 /* LoginConstraints.swift in Sources */,
 				96435C7D1FD1ECA800E87BA3 /* TextFieldView.swift in Sources */,
 				846E40DD1FDDE86700ED0EA9 /* ForgotUsernameView.swift in Sources */,
-				84F31DEC1FF9BD6200B2D902 /* SignUpViewController.swift in Sources */,
 				846E40DF1FDDE87600ED0EA9 /* ForgotPasswordView.swift in Sources */,
 				969F3CF91FD451EE0054639C /* DJ.swift in Sources */,
 				964648641FE5DDB2002F4C2D /* RightSlideMenuViewController.swift in Sources */,
